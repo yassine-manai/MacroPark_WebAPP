@@ -92,54 +92,59 @@ fetch("http://127.0.0.1:8100/getall")
 						return cell;
 					}
 
-					function deleteBarrier(barrierId) 
-					{
-	
-							console.log("deleted");
-							fetch(`http://127.0.0.1:8100/delete/${barrierId}`, {
-							method: "DELETE",
-							})
-							.then((response) => {
-								if (response.ok) {
-								console.log(
-									`Barrier with id ${barrierId} deleted successfully`
-								);
-
-								Swal.fire({
-									text: "Deleted Successfully",
-									buttonsStyling: false,
-									showConfirmButton: false,
-    								timer: 2500 
-								}).then(function () {
-									KTUtil.scrollTop();
-									setTimeout(function() {
-										location.reload();
-									}, 3000); // Adjust the delay time in milliseconds (2000 milliseconds = 2 seconds)
-								});
-
-								} else {
-								console.error(
-									`Failed to delete barrier with id ${barrierId}`
-								);
-
-								Swal.fire({
-									text: " Error",
-									icon: "error",
-									buttonsStyling: false,
-									confirmButtonText: "Ok, got it!",
-									customClass: { confirmButton: "btn btn-dark" },
-									}).then(function () {
-									KTUtil.scrollTop();
-									});
-								}
-							})
-							.catch((error) =>
-								console.error(
-								`Error deleting barrier with id ${barrierId}:`,
-								error
-								)
-							);
-						}
+					function deleteBarrier(barrierId) {
+						Swal.fire({
+							text: "Are you sure you want to delete?",
+							icon: "warning",
+							showCancelButton: true,
+							confirmButtonText: "Yes, delete it!",
+							cancelButtonText: "No, cancel",
+							buttonsStyling: false,
+							customClass: {
+								confirmButton: "btn btn-danger",
+								cancelButton: "btn btn-secondary"
+							}
+						}).then((result) => {
+							if (result.isConfirmed) {
+								fetch(`http://127.0.0.1:8100/delete/${barrierId}`, {
+									method: "DELETE",
+								})
+								.then((response) => {
+									if (response.ok) {
+										console.log(`Barrier with id ${barrierId} deleted successfully`);
+					
+										Swal.fire({
+											text: "Deleted Successfully",
+											icon: "success",
+											buttonsStyling: false,
+											showConfirmButton: false,
+											timer: 2500
+										}).then(() => {
+											KTUtil.scrollTop();
+											setTimeout(() => {
+												location.reload();
+											}, 3000); // Adjust the delay time in milliseconds (2000 milliseconds = 2 seconds)
+										});
+					
+									} else {
+										console.error(`Failed to delete barrier with id ${barrierId}`);
+					
+										Swal.fire({
+											text: " Error",
+											icon: "error",
+											buttonsStyling: false,
+											confirmButtonText: "Ok, got it!",
+											customClass: { confirmButton: "btn btn-dark" },
+										}).then(() => {
+											KTUtil.scrollTop();
+										});
+									}
+								})
+								.catch((error) => console.error(`Error deleting barrier with id ${barrierId}:`, error));
+							}
+						});
+					}
+					
 
 
 						function modifyBarriers(barrierId) {

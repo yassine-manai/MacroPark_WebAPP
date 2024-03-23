@@ -8,7 +8,7 @@ EventById = APIRouter()
 app = FastAPI()
 
 
-@Event_List.get("/getEvents", tags=["Events"])
+@Event_List.get("/Event", tags=["Events"])
 async def get_all_Events():
     conn, cursor = get_db_events()
     cursor.execute('''SELECT * FROM Events''')

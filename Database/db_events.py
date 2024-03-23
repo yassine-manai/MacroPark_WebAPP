@@ -17,7 +17,7 @@ def get_db_events():
         cursor.execute('''CREATE TABLE events 
                             (
                                 barrier_id INTEGER,
-                                time TEXT NOT NULL,
+                                time TEXT,
                                 extraData TEXT,
                                 ip_user TEXT,
                                 meth TEXT
