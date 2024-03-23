@@ -1641,3 +1641,6 @@
 2024-03-23 09:18:50.285 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
 2024-03-23 09:18:50.430 | INFO     | get_db_events:./Database/events.db | db_events.py:8
 2024-03-23 09:18:50.431 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-23 09:20:25.275 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-23 09:20:25.579 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-23 09:20:25.581 | INFO     | get_db_events:Events table already exists | db_events.py:30
