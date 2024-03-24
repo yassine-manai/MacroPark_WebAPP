@@ -3,8 +3,8 @@ from Database.db_events import get_db_events
 #ADD
 def add_open_event(barrier_id: int, ip_user: str, status_code: int, extradata: str):
     status = {
-        500: "Barrier Disconnected",
-        404: "Barrier Not Found",
+        500: "Barrier Disconnected - Open Action",
+        404: "Barrier Not Found - Open Action",
         200: "Barrier Opened"
     }
 
@@ -19,8 +19,8 @@ def add_open_event(barrier_id: int, ip_user: str, status_code: int, extradata: s
 #Close Event Add
 def add_close_event(barrier_id: int, ip_user: str, status_code: int, extradata: str):
     status = {
-        500: "Barrier Disconnected",
-        404: "Barrier Not Found",
+        500: "Barrier Disconnected - Close Action",
+        404: "Barrier Not Found - Close Action",
         200: "Barrier Closed"
     }
 

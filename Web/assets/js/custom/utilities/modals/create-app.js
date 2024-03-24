@@ -5,45 +5,49 @@ var KTCreateApp = (function () {
 
   return {
     init: function () {
-      stepper = new KTStepper(document.getElementById("kt_modal_create_app_stepper"));
+      stepper = new KTStepper(
+        document.getElementById("kt_modal_create_app_stepper")
+      );
       form = document.getElementById("kt_modal_create_app_form");
       validator = FormValidation.formValidation(form, {
         fields: {
           id: {
             validators: {
               notEmpty: {
-                message: "Barrier ID is required"
-              }
-            }
+                message: "Barrier ID is required",
+              },
+            },
           },
           ip: {
             validators: {
               notEmpty: {
-                message: "Barrier IP is required"
-              }
-            }
+                message: "Barrier IP is required",
+              },
+            },
           },
           port: {
             validators: {
               notEmpty: {
-                message: "Barrier Port is required"
-              }
-            }
+                message: "Barrier Port is required",
+              },
+            },
           },
-          open: { // Change to "open"
+          open: {
+            // Change to "open"
             validators: {
               notEmpty: {
-                message: "Barrier Open Code is required"
-              }
-            }
+                message: "Barrier Open Code is required",
+              },
+            },
           },
-          close: { // Change to "close"
+          close: {
+            // Change to "close"
             validators: {
               notEmpty: {
-                message: "Barrier Close Code is required"
-              }
-            }
-          }
+                message: "Barrier Close Code is required",
+              },
+            },
+          },
         },
         plugins: {
           trigger: new FormValidation.plugins.Trigger(),
@@ -59,7 +63,6 @@ var KTCreateApp = (function () {
       document.getElementById("add").addEventListener("click", function () {
         validator.validate().then(function (status) {
           if (status === "Valid") {
-            // Collect data from the dialog form
             var id = document.getElementById("id").value;
             var ip = document.getElementById("ip").value;
             var port = document.getElementById("port").value;
@@ -73,51 +76,50 @@ var KTCreateApp = (function () {
               port: port,
               op_cmd: op_cmd,
               cl_cmd: cl_cmd,
-              description: description
+              description: description,
             };
 
-            // Log the data before sending
-            console.log('Data to send:', formData);
-
-            fetch('http://localhost:8100/add', {
-              method: 'POST',
+            fetch("http://localhost:8100/add", {
+              method: "POST",
               headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
               },
-              body: JSON.stringify(formData)
+              body: JSON.stringify(formData),
             })
-            .then(response => {
-              if (!response.ok) {
-                throw new Error('Network response was not ok');
-              }
-              return response.json();
-            })
-            .then(data => {
-              console.log('Server response:', data);
-              console.log("Barrier added successfully:", data);
-              alert("Barrier Added Successfully");
-
-              Swal.fire({
-                icon: 'success',
-                title: 'Barrier Added Successfully',
-                showConfirmButton: false,
-                timer: 1500 // Show success message for 1.5 seconds before closing
-            }).then(function () {
-                KTUtil.scrollTop();
-                setTimeout(function() {
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error("Network response was not ok");
+                }
+                return response.json();
+              })
+              .then((data) => {
+                Swal.fire({
+                  icon: "success",
+                  title: "Barrier Added Successfully",
+                  showConfirmButton: false,
+                  timer: 1500,
+                }).then(function () {
+                  KTUtil.scrollTop();
+                  setTimeout(function () {
                     location.reload();
-                }, 1500); // Reload the page after 1.5 seconds
-            });
-            
-              // Optionally, you can handle the server response here
-            })
-            .catch(error => {
-              console.error('There was a problem with the fetch operation:', error);
-              alert("Failed to add barrier. Please try again.");
-
-            });
+                  }, 1500);
+                });
+              })
+              .catch((error) => {
+                console.error(
+                  "There was a problem with the fetch operation:",
+                  error
+                );
+                Swal.fire({
+                  title: "Error ! ",
+                  text: " Please try again",
+                  icon: "error",
+                  buttonsStyling: false,
+                  showConfirmButton: false,
+                  timer: 1500,
+                });
+              });
           } else {
-            // Display error message using Swal
             Swal.fire({
               text: "Sorry, looks like there are some errors detected, please fill all the fields.",
               icon: "error",

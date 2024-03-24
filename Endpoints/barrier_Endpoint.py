@@ -18,7 +18,7 @@ Modify_barrier = APIRouter()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5500"],
+    allow_origins=["http://127.0.0.1:5502"],
     allow_credentials=True,
     allow_methods=["GET", "POST", "OPTIONS", "PUT", "DELETE"], 
     allow_headers=["Content-Type"], 
@@ -47,7 +47,7 @@ async def delete_barrier(barrier_id: int):
     return {"message": "Barrier deleted successfully"}
 
 
-@Barrier_List.get("/getall", tags=["Barriers Data"])
+@Barrier_List.get("/Barrier", tags=["Barriers Data"])
 async def get_all_barriers():
     conn, cursor = get_db_barrier()
     cursor.execute('''SELECT * FROM barriers''')
@@ -59,7 +59,7 @@ async def get_all_barriers():
 
 
 
-@BarrierById.get("/getBarrier/{id}" ,tags=["Barriers Data"])
+@BarrierById.get("/Barrier/{id}", tags=["Barriers Data"])
 async def get_barrier_by_id(id: int):
     conn, cursor = get_db_barrier()
     cursor.execute('''SELECT * FROM barriers WHERE id = ?''', (id,))
@@ -67,8 +67,17 @@ async def get_barrier_by_id(id: int):
     conn.close()
     if not barrier:
         raise HTTPException(status_code=404, detail="Barrier not found")
-    return JSONResponse(content=barrier, status_code=200)
+    
+    barrier = {
+        "id": barrier[0],
+        "ip": barrier[1],
+        "port": barrier[2],
+        "op_cmd": barrier[3],
+        "cl_cmd": barrier[4],
+        "description": barrier[5]
+    }
 
+    return JSONResponse(content=barrier, status_code=200)
 
 
 @Modify_barrier.put("/modify/{barrier_id}", tags=["Barriers Data"])
