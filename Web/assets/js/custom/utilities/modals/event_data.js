@@ -68,6 +68,8 @@ document.addEventListener("DOMContentLoaded", function() {
 					const noDataMessageRow = document.createElement("tr");
 					const noDataMessageCell = document.createElement("td");
 					const span = document.createElement("span");
+
+					
 					//span.textContent = `No event found with this id ${searchText}`;
                     span.textContent = "No event found";
 					span.classList.add("text-dark", "fw-bold", "text-hover-primary", "d-block", "mb-1", "fs-6");

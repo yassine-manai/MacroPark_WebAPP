@@ -66,10 +66,11 @@ function createActionCell(barrierId, openCmd, closeCmd, inputField) {
     openButton.addEventListener("click", function () {
 
         Swal.fire({
-            title: "Loading",
-            icon: "info",
-            showConfirmButton: false
-        });
+            title: "Connecting to the barrier. . . ",
+            didOpen: () => {
+              Swal.showLoading();
+            },
+          });
         
         const extraData = inputField.value;
         openBarrier(barrierId, openCmd, extraData);
@@ -84,11 +85,12 @@ function createActionCell(barrierId, openCmd, closeCmd, inputField) {
     closeButton.addEventListener("click", function () {
 
         Swal.fire({
-            title: "Loading",
-            icon: "info",
-            showConfirmButton: false
-        });
-        
+            title: "Connecting to the barrier. . . ",
+            didOpen: () => {
+              Swal.showLoading();
+            },
+          });
+                  
         const extraData = inputField.value; 
         closeBarrier(barrierId, closeCmd, extraData);
     });
@@ -108,9 +110,8 @@ function openBarrier(barrierId, openCmd, extraData) {
     .then(response => {
         if (response.ok) {
             Swal.fire({
-
                 title: "OPENED !",
-                text: `Barrier with id ${barrierId} Opened successfully`,
+                text: `Barrier ${barrierId} Opened successfully`,
                 icon: "success"
             });
         } else if (response.status === 404) {
@@ -121,8 +122,8 @@ function openBarrier(barrierId, openCmd, extraData) {
             });
         } else if (response.status === 500) {
             Swal.fire({
-                title: " Barrier Disconnedted ! ",
-                text: `Check barrier id : ${barrierId} connection`,
+                title: " Barrier Disconnected ! ",
+                text: `Check barrier ${barrierId} connection`,
                 icon: "error"
             });
         }
@@ -142,7 +143,7 @@ function closeBarrier(barrierId, closeCmd, extraData) {
         if (response.ok) {
             Swal.fire({
                 title: "CLOSED !",
-                text: `Barrier with id ${barrierId} closed successfully`,
+                text: `Barrier  ${barrierId} closed successfully`,
                 icon: "success"
             });
         } else if (response.status === 404) {
@@ -154,7 +155,7 @@ function closeBarrier(barrierId, closeCmd, extraData) {
         } else if (response.status === 500) {
             Swal.fire({
                 title: " Barrier Disconnedted ! ",
-                text: `Check barrier id : ${barrierId} connection`,
+                text: `Check barrier  ${barrierId} connection`,
                 icon: "error"
             });
         }

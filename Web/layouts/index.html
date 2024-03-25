@@ -242,7 +242,7 @@
 					<div class="modal-header">
 
 						<!--begin::Modal title-->
-						<h2>Add barrier information</h2>
+							<h2>Add barrier information</h2>
 						<!--end::Modal title-->
 
 						<!--begin::Close-->
@@ -262,7 +262,7 @@
 						<div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid" id="kt_modal_create_app_stepper">
 
 							<!--begin::Content-->
-							<div class="flex-row-fluid py-lg-5 px-lg-15">
+							<div class="flex-row-fluid py-lg-5 px-lg-5">
 								<!--begin::Form-->
 								<form class="form" novalidate="novalidate" id="kt_modal_create_app_form">
 									<!--begin::Step 1-->
@@ -290,88 +290,94 @@
 											<!--end::Input group-->
 
 											<!--begin::Input group-->
-											<div class="fv-row mb-10">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
-													<span class="required">Barrier IP</span>
-													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your barrier IP">
-														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</span>
-												</label>
-												<!--end::Label-->
+											<div class="row mb-10">
+												<!-- Barrier IP -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Barrier IP</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your barrier IP">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
 
-												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="ip" placeholder="" value="" />
-												<!--end::Input-->
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="ip" placeholder="IP Adress" value="" />
+													<!--end::Input-->
+												</div>
+
+												<!-- Barrier Port -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Barrier Port</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your barrier Port  Default is 52719">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="port" placeholder="52719" value="52719" />
+													<!--end::Input-->
+												</div>
 											</div>
 											<!--end::Input group-->
+
 
 											<!--begin::Input group-->
-											<div class="fv-row mb-10">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
-													<span class="required">Barrier Port</span>
-													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your barrier Port">
-														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</span>
-												</label>
-												<!--end::Label-->
+											<div class="row mb-10">
+												<!-- Barrier Open Code -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Barrier Open Code</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your Hex Open code ">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
 
-												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="port" placeholder="52719" value="52719" />
-												<!--end::Input-->
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="open" placeholder="55 03 01 01 00 B8 B4" value="55 03 01 01 00 B8 B4" />
+													<!--end::Input-->
+												</div>
+
+												<!-- Barrier Close Code -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Barrier Close Code</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your Hex Close code ">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="close" placeholder="55 03 01 02 00 ED E7" value="55 03 01 02 00 ED E7" />
+													<!--end::Input-->
+												</div>
 											</div>
 											<!--end::Input group-->
 
-											<!--begin::Input group-->
-											<div class="fv-row mb-10">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
-													<span class="required">Barrier Open Code</span>
-													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your Hex Open code ">
-														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</span>
-												</label>
-												<!--end::Label-->
-
-												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="open" placeholder="55 03 01 01 00 B8 B4" value="55 03 01 01 00 B8 B4" />
-												<!--end::Input-->
-											</div>
-											<!--end::Input group-->
-
-											<!--begin::Input group-->
-											<div class="fv-row mb-10">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
-													<span class="required">Barrier Close Code</span>
-													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your Hex Close code ">
-														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</span>
-												</label>
-												<!--end::Label-->
-
-												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="close" placeholder="55 03 01 02 00 ED E7" value="55 03 01 02 00 ED E7" />
-												<!--end::Input-->
-											</div>
-											<!--end::Input group-->
 
 											<!--begin::Input group-->
 											<div class="fv-row mb-10">
@@ -389,7 +395,7 @@
 												<!--end::Label-->
 
 												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="description" placeholder="Description" value="No description" />
+												<input type="text" class="form-control form-control-lg form-control-solid" id="description" placeholder="Description" value="" />
 												<!--end::Input-->
 											</div>
 											<!--end::Input group-->
@@ -495,88 +501,94 @@
 											<!--end::Input group-->
 
 											<!--begin::Input group-->
-											<div class="fv-row mb-10">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
-													<span class="required">Barrier IP</span>
-													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your barrier IP">
-														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</span>
-												</label>
-												<!--end::Label-->
+												<div class="row mb-10">
+												<!-- Barrier IP -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Barrier IP</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your barrier IP">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
 
-												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="ip_modify" placeholder="192.168.0.200" value="" />
-												<!--end::Input-->
-											</div>
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="ip_modify" placeholder="" value="" />
+													<!--end::Input-->
+												</div>
+
+												<!-- Barrier Port -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Barrier Port</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your barrier Port">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="port_modify" placeholder="" value="" />
+													<!--end::Input-->
+												</div>
+												</div>
 											<!--end::Input group-->
+
 
 											<!--begin::Input group-->
-											<div class="fv-row mb-10">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
-													<span class="required">Barrier Port</span>
-													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your barrier Port">
-														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</span>
-												</label>
-												<!--end::Label-->
+											<div class="row mb-10">
+												<!-- Barrier Open Code -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Barrier Open Code</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your Hex Open code ">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
 
-												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="port_modify" placeholder="52719" value="" />
-												<!--end::Input-->
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="open_modify" placeholder="" value="" />
+													<!--end::Input-->
+												</div>
+
+												<!-- Barrier Close Code -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Barrier Close Code</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your Hex Close code ">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="close_modify" placeholder="" value="" />
+													<!--end::Input-->
+												</div>
 											</div>
 											<!--end::Input group-->
 
-											<!--begin::Input group-->
-											<div class="fv-row mb-10">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
-													<span class="required">Barrier Open Code</span>
-													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your Hex Open code ">
-														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</span>
-												</label>
-												<!--end::Label-->
-
-												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="open_modify" placeholder="55 03 01 01 00 B8 B4" value="" />
-												<!--end::Input-->
-											</div>
-											<!--end::Input group-->
-
-											<!--begin::Input group-->
-											<div class="fv-row mb-10">
-												<!--begin::Label-->
-												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
-													<span class="required">Barrier Close Code</span>
-													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your Hex Close code ">
-														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
-															<span class="path1"></span>
-															<span class="path2"></span>
-															<span class="path3"></span>
-														</i>
-													</span>
-												</label>
-												<!--end::Label-->
-
-												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="close_modify" placeholder="55 03 01 02 00 ED E7" value="" />
-												<!--end::Input-->
-											</div>
-											<!--end::Input group-->
 
 											<!--begin::Input group-->
 											<div class="fv-row mb-10">
@@ -594,7 +606,7 @@
 												<!--end::Label-->
 
 												<!--begin::Input-->
-												<input type="text" class="form-control form-control-lg form-control-solid" id="description_modify" placeholder="Description" value="" />
+												<input type="text" class="form-control form-control-lg form-control-solid" id="description_modify" placeholder="" value="" />
 												<!--end::Input-->
 											</div>
 											<!--end::Input group-->

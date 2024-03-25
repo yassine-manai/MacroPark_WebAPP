@@ -4,9 +4,17 @@ fetch("http://127.0.0.1:8100/Barrier")
     console.log(data);
     const barriersTable = document.getElementById("barriersTable");
     if (data.length === 0) {
-      const noDataMessage = document.createElement("p");
-      noDataMessage.textContent = "No barriers found";
-      barriersTable.appendChild(noDataMessage);
+		const noDataMessageRow = document.createElement("tr");
+		const noDataMessageCell = document.createElement("td");
+		const span = document.createElement("span");
+		//span.textContent = `No event found with this id ${searchText}`;
+		span.textContent = "No barrier jfound";
+		span.classList.add("text-dark", "fw-bold", "text-hover-primary", "d-block", "mb-1", "fs-6");
+		noDataMessageCell.appendChild(span);
+		noDataMessageCell.colSpan = 7; // Span across all columns
+		noDataMessageCell.style.textAlign = "center"; // Center the text
+		noDataMessageRow.appendChild(noDataMessageCell);
+		barriersTable.appendChild(noDataMessageRow);
     } else {
       data.forEach((barrier) => {
         const newRow = document.createElement("tr");

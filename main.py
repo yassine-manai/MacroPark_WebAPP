@@ -35,7 +35,7 @@ StandaloneDocs(app=app)
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5502"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["GET", "POST", "OPTIONS", "PUT", "DELETE"], 
     allow_headers=["Content-Type"], 

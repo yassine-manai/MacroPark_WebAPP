@@ -3698,3 +3698,504 @@
 2024-03-24 08:20:30.167 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
 2024-03-24 08:20:41.552 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
 2024-03-24 08:20:58.467 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:27:42.551 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:27:53.084 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:27:58.452 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:28:54.033 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:28:54.033 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:28:54.049 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:28:54.049 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:28:54.375 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:28:56.685 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:30:13.203 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:30:13.205 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:30:13.209 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:30:13.211 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:30:13.250 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:31:07.536 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:31:07.538 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:31:07.541 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:31:07.543 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:31:07.961 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:35:39.840 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:35:39.845 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:35:39.852 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:35:39.854 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:35:40.303 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:35:46.259 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:37:45.532 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:37:45.532 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:37:45.532 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:37:45.532 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:37:45.887 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:38:22.501 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:38:22.507 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:38:22.510 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:38:22.512 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:38:22.745 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:38:50.992 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:38:54.673 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:39:12.506 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:39:12.522 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:39:12.522 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:39:12.522 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:39:12.726 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:39:22.030 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:39:25.655 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:39:29.045 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:40:32.348 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:40:32.348 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:40:32.355 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:40:32.357 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:40:32.596 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:43:05.292 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:43:31.170 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:43:31.173 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:43:31.177 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:43:31.178 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:43:31.537 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:43:36.374 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:43:54.874 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:43:54.875 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:43:54.879 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:43:54.883 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:43:55.804 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:43:55.999 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:43:56.000 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:43:56.002 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:43:56.004 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:44:01.463 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:45:10.006 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:45:10.006 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:45:10.006 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:45:10.006 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:45:10.318 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:45:14.016 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:45:14.017 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:45:14.018 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:45:14.018 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:45:14.789 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:45:48.606 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:45:48.606 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:45:48.621 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:45:48.624 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:45:49.067 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:45:53.064 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:46:16.675 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:46:20.293 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:48:46.773 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:48:53.777 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:48:57.405 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:50:56.590 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:50:56.590 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:50:56.606 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:50:56.606 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:50:56.655 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:53:49.577 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:53:49.577 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:53:49.577 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:53:49.577 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:53:49.764 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:54:56.373 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:54:56.377 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:54:56.380 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:54:56.382 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:54:56.521 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:55:45.198 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:55:45.198 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:55:45.198 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:55:45.198 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:55:45.266 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:57:13.301 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:57:13.330 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:57:13.333 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:57:13.335 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:57:13.338 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:58:00.446 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:58:00.447 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:58:00.447 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:58:00.452 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:58:00.489 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:58:30.632 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:58:30.965 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:58:30.966 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:58:30.969 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:58:30.971 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:58:34.346 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:58:34.416 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:58:34.416 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:58:34.416 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:58:34.416 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:58:39.742 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:58:39.852 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:58:39.852 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:58:39.870 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 08:58:39.872 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 08:58:43.770 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:58:50.076 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 08:58:53.306 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 09:12:44.730 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 09:12:44.738 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 09:12:44.742 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 09:12:44.742 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 09:12:44.995 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 12:48:48.423 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 12:48:48.426 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 12:48:49.314 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 12:48:49.314 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 12:48:49.920 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 12:48:49.920 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 12:48:51.133 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 12:48:51.135 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 12:48:51.657 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 12:48:51.658 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 12:48:52.412 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 12:48:52.412 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 12:48:55.824 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 12:53:30.649 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 12:53:36.068 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 13:06:24.122 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:12:23.241 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:12:24.795 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:12:24.797 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:12:24.802 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:12:24.803 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:12:26.830 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:12:29.955 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:12:29.956 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:12:29.958 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:12:29.959 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:12:31.758 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:12:33.365 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:12:33.367 | INFO     | open_barrier_by_id:1588 | open_barrier.py:20
+2024-03-24 15:12:40.626 | ERROR    | send_action:Error establishing connection to 1588:52719: [Errno 11001] getaddrinfo failed | items.py:34
+2024-03-24 15:12:40.626 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 1588:52719: 500: Error establishing connection to 1588:52719: [Errno 11001] getaddrinfo failed | items.py:44
+2024-03-24 15:12:40.626 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:12:40.626 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:12:47.886 | ERROR    | send_action:Error establishing connection to 1588:52719: [Errno 11001] getaddrinfo failed | items.py:34
+2024-03-24 15:12:47.886 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 1588:52719: 500: Error establishing connection to 1588:52719: [Errno 11001] getaddrinfo failed | items.py:44
+2024-03-24 15:32:52.222 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:38:41.557 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:38:48.870 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:38:48.872 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:38:48.874 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:38:48.875 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:09.049 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:09.050 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:09.673 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:09.673 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:10.024 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:10.025 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:11.044 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:11.045 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:11.645 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:11.646 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:12.035 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:12.039 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:12.461 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:12.462 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:13.739 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:13.739 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:14.527 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:14.527 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:14.754 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:14.754 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:15.256 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:39:15.261 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:39:30.998 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:39:43.543 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:39:46.747 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:39:53.049 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:39:54.761 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:39:57.143 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:39:58.861 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:40:01.864 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:40:03.581 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:42:05.204 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:42:05.204 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:42:05.220 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:42:05.220 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:42:05.555 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:42:11.893 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:42:11.894 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:42:11.896 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:42:11.896 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:42:12.031 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:42:25.804 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:42:25.804 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:42:25.804 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:42:25.815 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:42:25.836 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:43:10.805 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:43:14.247 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:43:19.351 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:43:25.682 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:43:28.904 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:43:37.768 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:43:39.521 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:44:01.351 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:44:04.615 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:44:09.949 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:44:12.245 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 15:44:12.247 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 15:44:33.268 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 15:44:33.268 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 15:44:33.272 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:44:33.272 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:44:54.302 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 15:44:54.302 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 15:58:59.955 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:58:59.961 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 15:58:59.966 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 15:58:59.967 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 16:00:33.651 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 16:00:41.199 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 16:00:53.484 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 16:01:07.532 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 16:01:28.558 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 16:01:31.800 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 16:01:34.988 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 16:01:45.128 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 16:01:45.130 | INFO     | close_Barrier_By_Id:192.168.1.1 | close_barrier.py:20
+2024-03-24 16:01:47.281 | ERROR    | send_action:Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:30
+2024-03-24 16:01:47.281 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.1.1:52719: 500: Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:44
+2024-03-24 16:01:47.289 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 16:01:47.289 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 16:01:49.585 | ERROR    | send_action:Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:30
+2024-03-24 16:01:49.585 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.1.1:52719: 500: Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:44
+2024-03-24 19:26:10.111 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:26:10.147 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 19:26:31.174 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:26:31.177 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:26:31.178 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 19:26:31.180 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 19:26:52.208 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:26:52.211 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:28:54.312 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:28:54.314 | INFO     | open_barrier_by_id:192.168.20.207 | open_barrier.py:20
+2024-03-24 19:29:15.358 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:29:15.359 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:29:15.360 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 19:29:15.363 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 19:29:36.411 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:29:36.412 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:29:36.414 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:29:36.416 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:29:36.418 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 19:29:57.459 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:29:57.462 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:29:57.464 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 19:29:57.467 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 19:30:18.511 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:30:18.512 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:30:18.515 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:30:18.517 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 19:30:39.540 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:30:39.541 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:30:39.542 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 19:30:39.544 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 19:31:00.593 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:31:00.594 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:33:07.062 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:33:19.345 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:33:33.110 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:33:42.475 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:33:42.476 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 19:34:03.507 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:34:03.509 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:34:03.509 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 19:34:03.512 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 19:34:24.547 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:34:24.548 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:34:24.551 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:34:36.951 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:34:36.953 | INFO     | open_barrier_by_id:192.168.20.207 | open_barrier.py:20
+2024-03-24 19:34:57.987 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:34:57.989 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:34:57.990 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 19:34:57.991 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 19:35:19.063 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:35:19.064 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:35:19.067 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:35:19.071 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:35:19.073 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:35:19.075 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:35:24.226 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:35:30.465 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:35:34.830 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:35:34.832 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 19:35:55.881 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:35:55.884 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:35:55.884 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 19:35:55.887 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 19:36:16.934 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:36:16.935 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:36:27.982 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:38:06.128 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:38:19.548 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:38:25.468 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:38:28.540 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:38:30.405 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:38:30.407 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 19:38:51.437 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:38:51.438 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:38:51.439 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 19:38:51.441 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 19:39:12.508 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:39:12.512 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:39:12.517 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:39:38.098 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:39:40.786 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:39:42.551 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 19:39:42.553 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 19:40:03.579 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:40:03.581 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 19:40:03.582 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 19:40:03.586 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 19:40:24.628 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 19:40:24.630 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:09:44.567 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:11:47.086 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:11:54.131 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:11:56.162 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:11:56.165 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 20:12:17.188 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:12:17.190 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:12:17.192 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:12:17.196 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:12:38.247 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:12:38.249 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:12:38.253 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:12:42.386 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:12:42.392 | INFO     | close_Barrier_By_Id:192.168.20.207 | close_barrier.py:20
+2024-03-24 20:13:03.424 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:13:03.427 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:13:03.428 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:13:03.439 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:13:24.489 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:13:24.490 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:14:30.089 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:18:18.041 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:18:19.258 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:18:33.020 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:18:39.700 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:18:57.735 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:19:04.100 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:19:12.594 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:19:12.598 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:19:12.605 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:19:12.607 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:19:13.547 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:19:49.474 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:19:52.867 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:20:45.156 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:20:58.175 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:20:59.755 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:21:21.586 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:21:49.495 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:22:40.092 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:23:29.122 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:23:29.124 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:23:29.131 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:23:29.133 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:23:34.985 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:27:34.185 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:27:34.189 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:27:34.196 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:27:34.198 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:27:54.800 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:27:54.801 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:27:54.806 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:27:54.808 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:28:04.355 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:28:04.358 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:28:04.367 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:28:04.368 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:28:12.128 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:28:12.131 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:28:12.148 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:28:12.151 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:29:08.713 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:29:08.715 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:29:08.720 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:29:08.722 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:29:25.615 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:29:25.617 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:29:25.622 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:29:25.624 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:29:27.477 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:29:27.480 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:29:27.484 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:29:27.487 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:29:30.862 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:29:30.864 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:29:30.867 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:29:30.869 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:29:32.328 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:29:37.594 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:29:52.329 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:29:52.331 | INFO     | open_barrier_by_id:192.168.20.207 | open_barrier.py:20
+2024-03-24 20:30:13.381 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:30:13.383 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:30:13.386 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:30:13.387 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:30:34.431 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:30:34.432 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:30:34.437 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:31:16.343 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:31:18.105 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:31:18.107 | INFO     | open_barrier_by_id:192.168.20.207 | open_barrier.py:20
+2024-03-24 20:31:39.153 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:31:39.155 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:31:39.157 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:31:39.162 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:32:00.213 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:32:00.214 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:32:00.217 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:32:03.300 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:32:03.302 | INFO     | open_barrier_by_id:192.168.20.207 | open_barrier.py:20
+2024-03-24 20:32:24.340 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:32:24.341 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:32:24.342 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:32:24.345 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:32:45.380 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:32:45.384 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:32:45.387 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:32:50.303 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:32:54.527 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:32:56.240 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:32:56.242 | INFO     | open_barrier_by_id:192.168.20.207 | open_barrier.py:20
+2024-03-24 20:33:17.271 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:33:17.273 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:33:17.277 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:33:17.282 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:33:38.344 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:33:38.345 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:34:21.137 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:35:20.726 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:35:20.728 | INFO     | open_barrier_by_id:192.168.1.1 | open_barrier.py:20
+2024-03-24 20:35:22.814 | ERROR    | send_action:Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:30
+2024-03-24 20:35:22.816 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.1.1:52719: 500: Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:44
+2024-03-24 20:35:22.818 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:35:22.823 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:35:24.923 | ERROR    | send_action:Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:30
+2024-03-24 20:35:24.925 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.1.1:52719: 500: Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:44
+2024-03-24 20:35:32.074 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:35:33.773 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:35:33.775 | INFO     | open_barrier_by_id:192.168.20.207 | open_barrier.py:20
+2024-03-24 20:35:54.827 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:35:54.829 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:35:54.831 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:35:54.836 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:36:15.882 | ERROR    | send_action:Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:34
+2024-03-24 20:36:15.884 | ERROR    | send_action:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.20.207:52719: 500: Error establishing connection to 192.168.20.207:52719: [WinError 10060] Une tentative de connexion a échoué car le parti connecté n’a pas répondu convenablement au-delà d’une certaine durée ou une connexion établie a échoué car l’hôte de connexion n’a pas répondu | items.py:44
+2024-03-24 20:36:25.311 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:36:25.313 | INFO     | close_Barrier_By_Id:192.168.1.1 | close_barrier.py:20
+2024-03-24 20:36:27.416 | ERROR    | send_action:Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:30
+2024-03-24 20:36:27.418 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.1.1:52719: 500: Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:44
+2024-03-24 20:36:27.419 | INFO     | get_db_events:./Database/events.db | db_events.py:8
+2024-03-24 20:36:27.422 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-03-24 20:36:29.534 | ERROR    | send_action:Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:30
+2024-03-24 20:36:29.535 | ERROR    | send_action:Error sending Action '55 03 01 02 00 ED E7' to 192.168.1.1:52719: 500: Connection refused to 192.168.1.1:52719: [WinError 10061] Aucune connexion n’a pu être établie car l’ordinateur cible l’a expressément refusée | items.py:44
+2024-03-24 20:36:41.219 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
+2024-03-24 20:37:48.789 | INFO     | get_db_barrier:./Database/barriers.db | db_barriers.py:7
