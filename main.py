@@ -8,26 +8,32 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 
-from Elka.close_barrier import Close_barrier
 from Elka.open_barrier import Open_barrier
 from Elka.close_barrier import Close_barrier
 from Elka.status_barrier import Status
 from Elka.unlock_barrier import Unlock_barrier
 from Elka.lock_barrier import Lock_barrier
 
-from Endpoints.barrier_Endpoint import Add_barrier
-from Endpoints.barrier_Endpoint import Delete_barrier
-from Endpoints.barrier_Endpoint import Barrier_List
-from Endpoints.barrier_Endpoint import BarrierById
-from Endpoints.barrier_Endpoint import Modify_barrier
+from Endpoints.barrier_Endpoint import *
+from Events.Get_Events import *
+from Events.Delete_Event import *
+from auth.Users.users import *
+from auth.Guests.guests import *
+
+
 from Config.config import APP_PORT
 
-from Events.Get_Events import Event_List
-from Events.Get_Events import EventById
-from Events.Delete_Event import Delete_all_event, Delete_event
 
 
 tags_metadata = [
+    {
+        "name": "Users",
+        "description": "All Users Company",
+    },
+    {
+        "name": "Guests",
+        "description": "All Guests Company",
+    },
     {
         "name": "Barriers Data",
         "description": "CRUD Operations for barriers data",
@@ -44,13 +50,12 @@ tags_metadata = [
 
 # Initialize FastAPI application
 app = FastAPI(
-    title="Barriers",
+    title="Scheidt & Bachmann - Parking Managment System ",
     openapi_tags=tags_metadata,
     redoc_url=None
 )
 
 StandaloneDocs(app=app)
-
 
 templates = Environment(loader=FileSystemLoader("static"))
 
@@ -59,12 +64,26 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS", "PUT", "DELETE"],
+    allow_methods=["*"],
     allow_headers=["Content-Type"],
 )
 
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
+
+# Users Data Endpoints
+app.include_router(Add_User)
+app.include_router(UserByEmail)
+app.include_router(User_List)
+app.include_router(Login_User)
+app.include_router(Modify_User)
+app.include_router(Delete_User)
+
+# Guests Data Endpoints
+app.include_router(Add_guest)
+app.include_router(Guests_List)
+app.include_router(Delete_Guest)
 
 # Barrier Controller Endpoints
 app.include_router(Open_barrier)
@@ -90,7 +109,6 @@ app.include_router(Delete_all_event)
 
 
 # Define route to render Jinja2 templates
-
 @app.get("/")
 @app.get("/login.html", tags=["UI"])
 async def render_template(request: Request):

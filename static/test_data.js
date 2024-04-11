@@ -17,13 +17,20 @@ async function fetchDataAndPopulateTable() {
             data.forEach(barrier => {
                 const newRow = document.createElement("tr");
 
+                
+                const open_cmd = "55 03 01 02 00 ED E7";
+                const close_cmd = "55 03 01 02 00 ED E7";
+                const lock_cmd = "55 03 01 01 01 A8 95";
+                const unlock_cmd = "55 03 01 01 02 98 F6";
+
                 newRow.appendChild(createCell(barrier[1], true)); 
                 newRow.appendChild(createCell(barrier[3], true));
                 newRow.appendChild(createCell(barrier[4], true)); 
-                newRow.appendChild(createCell(barrier[5], true)); 
-                newRow.appendChild(createCell(barrier[6], true)); 
-                newRow.appendChild(createCell(barrier[7], true)); 
-                newRow.appendChild(createCell(barrier[8], true)); 
+
+                newRow.appendChild(createCell(open_cmd, true)); 
+                newRow.appendChild(createCell(close_cmd, true)); 
+                newRow.appendChild(createCell(lock_cmd, true)); 
+                newRow.appendChild(createCell(unlock_cmd , true)); 
                 console.log(barrier)
 
                 const inputCell = document.createElement("td");

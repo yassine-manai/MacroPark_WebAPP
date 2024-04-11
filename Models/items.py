@@ -19,6 +19,44 @@ class ModifiedBarrierItem(BaseModel):
     ip: str
     port: int
 
+class userItem(BaseModel):
+    id: int
+    name: str
+    phone_number: str
+    email: str
+    password: str
+    lpn1: str
+    lpn2: str
+    lpn3: str
+    lpn4: str
+
+class UpdateUserData(BaseModel):
+    name: str
+    email: str
+    phone_number: str
+    password: str
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "name": "Name",
+                "email": "mail@example.com",
+                "phone_number": "1234567890",
+                "password": "password"
+            }
+        }
+
+
+class guestItem(BaseModel):
+    id: int
+    name: str
+    phone_number: str
+    email: str
+    password: str
+    lpn1: str
+    lpn2: str
+    lpn3: str
+    lpn4: str
 
 
 def send_action(ip_address, port, hex_code, action):

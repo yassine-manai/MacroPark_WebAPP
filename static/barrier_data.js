@@ -2,6 +2,12 @@ console.log(`IP Address: ${ipAddress}`);
 console.log(`Port: ${portep}`);
 
 
+      
+const open_cmd = "55 03 01 02 00 ED E7";
+const close_cmd = "55 03 01 02 00 ED E7";
+const lock_cmd = "55 03 01 01 01 A8 95";
+const unlock_cmd = "55 03 01 01 02 98 F6";
+
 
 fetch(`http://${ipAddress}:${portep}/Barrier`)
   .then((response) => response.json())
@@ -24,12 +30,6 @@ fetch(`http://${ipAddress}:${portep}/Barrier`)
     } else {
       data.forEach((barrier) => {
         const newRow = document.createElement("tr");
-
-
-        const open_cmd = "55 03 01 02 00 ED E7";
-        const close_cmd = "55 03 01 02 00 ED E7";
-        const lock_cmd = "55 03 01 01 01 A8 95";
-        const unlock_cmd = "55 03 01 01 02 98 F6";
 
         const idCell = createCell(barrier[1], true);
         const nameCell = createCell(barrier[0], true);
@@ -205,15 +205,21 @@ function modifyBarriers(barrierId) {
         return;
       }
 
+
+
+
       modifyNameInput.value = data.name || "";
       modifyIdInput.value = data.id || "";
       modifyTypeInput.value = data.type || "";
       modifyIpInput.value = data.ip || "";
       modifyPortInput.value = data.port || "";
-      modifyOpenCodeInput.value = data.op_cmd || "";
-      modifyCloseCodeInput.value = data.cl_cmd || "";
-      modifyLockCodeInput.value = data.lk_cmd || "";
-      modifyUnlockCodeInput.value = data.uk_cmd || "";
+      
+      modifyOpenCodeInput.value = open_cmd;
+      modifyCloseCodeInput.value = close_cmd;
+      modifyLockCodeInput.value = lock_cmd;
+      modifyUnlockCodeInput.value = unlock_cmd;
+
+      console.log(modifyCloseCodeInput.value);
 
       const modifyModal = new bootstrap.Modal(
         document.getElementById("kt_modal_modify")
