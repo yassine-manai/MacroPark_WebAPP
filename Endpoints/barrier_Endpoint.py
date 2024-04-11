@@ -1,7 +1,6 @@
 from Database.db_barriers import get_db_barrier
 from Database.Requests.req_barrier import modify_barrier_rq
 from Database.Requests.req_barrier import delete_barrier_rq
-from Database.db_barriers import get_db_barrier
 from Models import items
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
@@ -27,12 +26,24 @@ app.add_middleware(
 @Add_barrier.post("/add", tags=["Barriers Data"])
 async def add_barrier(barrier_item: items.BarrierItem):
     conn, cursor = get_db_barrier()
-    cursor.execute('''INSERT INTO barriers (id, ip, port, op_cmd, cl_cmd, description)
-                    VALUES (?, ?, ?, ?, ?, ?)''',
-                   (barrier_item.id, barrier_item.ip, barrier_item.port,
-                    barrier_item.op_cmd, barrier_item.cl_cmd,
-                    barrier_item.description))
     
+    # Retrieve the barrier by ID
+    existing_barrier = cursor.execute(
+        "SELECT * FROM barriers WHERE id = ?", (barrier_item.id,)
+    ).fetchone()
+
+    # If a barrier with the same ID exists, return an error
+    if existing_barrier:
+        conn.close()
+        raise HTTPException(status_code=400, detail={"errordata": 404,"message":"Barrier with the same ID already exists"})
+
+    # If no barrier with the same ID exists, add the new barrier data to the database
+    cursor.execute(
+        '''INSERT INTO barriers (name, id, type, ip, port)
+           VALUES (?, ?, ?, ?, ?)''',
+        (barrier_item.name, barrier_item.id, barrier_item.barrierType, barrier_item.ip, barrier_item.port)
+    )
+
     conn.commit()
     conn.close()
     return {"message": "Barrier added successfully"}
@@ -66,15 +77,14 @@ async def get_barrier_by_id(id: int):
     barrier = cursor.fetchone()
     conn.close()
     if not barrier:
-        raise HTTPException(status_code=404, detail="Barrier not found")
+        raise HTTPException(status_code=404, detail={"errordata": 404,"message":"Barrier with the same ID already exists"})
     
     barrier = {
-        "id": barrier[0],
-        "ip": barrier[1],
-        "port": barrier[2],
-        "op_cmd": barrier[3],
-        "cl_cmd": barrier[4],
-        "description": barrier[5]
+        "name": barrier[0],
+        "id": barrier[1],
+        "type": barrier[2],
+        "ip": barrier[3],
+        "port": barrier[4],
     }
 
     return JSONResponse(content=barrier, status_code=200)

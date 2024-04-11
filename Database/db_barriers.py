@@ -12,22 +12,18 @@ def get_db_barrier():
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='barriers'")
     table_barrier_exists = cursor.fetchone()
 
-
     # Table Barriers
     if not table_barrier_exists:
         cursor.execute('''CREATE TABLE barriers 
                             (
+                                name TEXT,
                                 id INTEGER,
+                                type TEXT,
                                 ip TEXT NOT NULL,
-                                port INTEGER NOT NULL,
-                                op_cmd TEXT,
-                                cl_cmd TEXT,
-                                description TEXT
-                            )'''
-                       )
+                                port INTEGER NOT NULL
+                            )''')  
         
         conn.commit()
         logger.info("Created 'barriers' table")
-
 
     return conn, cursor
