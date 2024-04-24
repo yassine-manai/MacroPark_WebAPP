@@ -56,7 +56,7 @@ app = FastAPI(
 )
 
 StandaloneDocs(app=app)
-
+    
 templates = Environment(loader=FileSystemLoader("static"))
 
 # Add CORS middleware
@@ -75,15 +75,20 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 # Users Data Endpoints
 app.include_router(Add_User)
 app.include_router(UserByEmail)
+app.include_router(UserById)
 app.include_router(User_List)
 app.include_router(Login_User)
 app.include_router(Modify_User)
+app.include_router(Modify_Web)
 app.include_router(Delete_User)
 
 # Guests Data Endpoints
-app.include_router(Add_guest)
-app.include_router(Guests_List)
+app.include_router(Add_Guest)
+app.include_router(Get_Guests)
 app.include_router(Delete_Guest)
+app.include_router(GuestByEmail)
+app.include_router(GuestById)
+app.include_router(Approuve_Guest)
 
 # Barrier Controller Endpoints
 app.include_router(Open_barrier)
@@ -153,7 +158,18 @@ async def render_template(request: Request):
         return HTMLResponse(content=content)
     except TemplateNotFound:
         raise HTTPException(status_code=404, detail="Template not found")
+    
+@app.get("/")
+@app.get("/stats.html", tags=["UI"])
+async def render_template(request: Request):
+    try:
+        template = templates.get_template("stats.html")
+        content = template.render(title="Welcome to Barriers")
+        
+        return HTMLResponse(content=content)
+    except TemplateNotFound:
+        raise HTTPException(status_code=404, detail="Template not found")
 
 # APP Runner
-if __name__ == "__main__":
+if __name__ == "__main__":  
     uvicorn.run("main:app", host="0.0.0.0", port=APP_PORT, reload=True)

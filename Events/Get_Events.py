@@ -28,3 +28,15 @@ async def get_all_Events(id: int):
     if not events:
         raise HTTPException(status_code=404, detail="Events not found")
     return JSONResponse(content=events, status_code=200)
+
+
+
+@EventById.get("/Event/{time}", tags=["Events"])
+async def get_all_Events(time: int):
+    conn, cursor = get_db_events()
+    cursor.execute('''SELECT * FROM events WHERE time = ?''', (time,))
+    events = cursor.fetchall()  
+    conn.close()
+    if not events:
+        raise HTTPException(status_code=404, detail="Events not found")
+    return JSONResponse(content=events, status_code=200)

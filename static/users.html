@@ -182,7 +182,7 @@
 											<!--begin::Table container-->
 											<div class="table-responsive">
 												<!--begin::Table-->
-												<table class="table align-middle gs-5 gy-4" id="barriersTable">
+												<table class="table align-middle gs-5 gy-4" id="usersTable">
 													<!--begin::Table head-->
 													<thead>
 														<tr class="fw-bold flex-center text-muted bg-light">
@@ -525,6 +525,298 @@
 										<div>
 											
 											<button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="next" id="add">Add
+											<i class="ki-duotone ki-arrow-right fs-3 ms-1 me-0">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i></button>
+										</div>
+										<!--end::Wrapper-->
+									</div>
+									<!--end::Actions-->
+								</form>
+								<!--end::Form-->
+							</div>
+							<!--end::Content-->
+						</div>
+						<!--end::Stepper-->
+					</div>
+					<!--end::Modal body-->
+				</div>
+				<!--end::Modal content-->
+			</div>
+			<!--end::Modal dialog-->
+		</div>
+		<!--end::Modal - Create App-->
+
+
+
+		<!--begin::Modal - Modify App-->
+		<div class="modal fade" id="kt_modal_modify" tabindex="-1" aria-hidden="true">
+			<!--begin::Modal dialog-->
+			<div class="modal-dialog modal-dialog-centered mw-900px">
+				<!--begin::Modal content-->
+				<div class="modal-content">
+					<!--begin::Modal header-->
+					<div class="modal-header">
+
+						<!--begin::Modal title-->
+						<h2>Modify barrier information</h2>
+						<!--end::Modal title-->
+
+						<!--begin::Close-->
+						<div class="btn btn-sm btn-icon btn-active-color-primary" data-bs-dismiss="modal">
+							<i class="ki-duotone ki-cross fs-1">
+								<span class="path1"></span>
+								<span class="path2"></span>
+							</i>
+						</div>
+						<!--end::Close-->
+					</div>
+					<!--end::Modal header-->
+
+					<!--begin::Modal body-->
+					<div class="modal-body py-lg-10 px-lg-5">
+						<!--begin::Stepper-->
+						<div class="stepper stepper-pills stepper-column d-flex flex-column flex-xl-row flex-row-fluid" id="kt_modal_create_app_stepper">
+
+							<!--begin::Content-->
+							<div class="flex-row-fluid py-lg-5 px-lg-5">
+								<!--begin::Form-->
+								<form class="form" novalidate="novalidate" id="kt_modal_create_app_form">
+									<!--begin::Step 1-->
+									<div class="current" data-kt-stepper-element="content">
+										<div class="w-100">
+
+											<!--begin::Input group-->
+											<div class="row mb-10">
+												<!--begin::Label-->
+
+												<div class="col">
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">User ID</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your ID">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="number" class="form-control form-control-lg form-control-solid" id="id_modify" placeholder="ID" value="" />
+													<!--end::Input-->
+												</div>
+
+												
+
+											</div>
+											<!--end::Input group-->
+
+											<!--begin::Input group-->
+											<div class="row mb-10">
+												<div class="col">
+
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+													<span  class="required" > Name </span>
+													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your name">
+														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+															<span class="path1"></span>
+															<span class="path2"></span>
+															<span class="path3"></span>
+														</i>
+													</span>
+												</label>
+												<!--end::Label-->
+
+												<!--begin::Input-->
+												<input type="text" class="form-control form-control-lg form-control-solid" id="name_modify" placeholder="Name" value="" />
+												<!--end::Input-->
+											</div>
+											<!--end::Input group-->
+
+											<div class="col">
+
+												<!--begin::Label-->
+												<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+													<span  class="required" > Phone Number </span>
+													<span class="ms-1" data-bs-toggle="tooltip" title="Specify your Phone Number ">
+														<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+															<span class="path1"></span>
+															<span class="path2"></span>
+															<span class="path3"></span>
+														</i>
+													</span>
+												</label>
+												<!--end::Label-->
+
+												<!--begin::Input-->
+												<input type="text" class="form-control form-control-lg form-control-solid" id="phone_modify" placeholder="Phone Number " value="" />
+												<!--end::Input-->
+												</div>
+											</div>
+
+
+											
+
+											<!--begin::Input group--> 
+											<div class="row mb-10">
+												<!-- Barrier IP -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Email</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your email">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="email_modify" placeholder="Email" value="" />
+													<!--end::Input-->
+												</div>
+
+												<!-- Barrier Port -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Password</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your password default is 123456">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="password_modify" placeholder="" value="123456" disabled/>
+													<!--end::Input-->
+												</div>
+											</div>
+											<!--end::Input group-->
+
+
+											<!--begin::Input group-->
+											<div class="row mb-10">
+												<!-- Barrier Open Code -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span class="required">Licence Plate Number 1 </span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your LPN ">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="lpn1_modify" placeholder="1111 TU 111" value=""   />
+													<!--end::Input-->
+												</div>
+
+												<!-- Barrier Close Code -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span>Licence Plate Number 2</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your LPN ">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="lpn2_modify" placeholder="2222 TU 222" value="" />
+													<!--end::Input-->
+												</div>
+											</div>
+											<!--end::Input group-->
+
+											<!--begin::Input group-->
+											<div class="row mb-10">
+												<!-- Barrier IP -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span>Licence Plate Number 3</span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your LPN">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="lpn3_modify" placeholder="3333 TU 333" value=""/>
+													<!--end::Input-->
+												</div>
+
+												<!-- Barrier Port -->
+												<div class="col">
+													<!--begin::Label-->
+													<label class="d-flex align-items-center fs-5 fw-semibold mb-2">
+														<span>Licence Plate Number 4 </span>
+														<span class="ms-1" data-bs-toggle="tooltip" title="Specify your LPN">
+															<i class="ki-duotone ki-information-5 text-gray-500 fs-6">
+																<span class="path1"></span>
+																<span class="path2"></span>
+																<span class="path3"></span>
+															</i>
+														</span>
+													</label>
+													<!--end::Label-->
+
+													<!--begin::Input-->
+													<input type="text" class="form-control form-control-lg form-control-solid" id="lpn4_modify" placeholder="4444 TU 444" value="" />
+													<!--end::Input-->
+												</div>
+											</div>
+											<!--end::Input group-->
+
+
+
+											
+										</div>
+									</div>
+									<!--end::Step 1-->
+
+									<!--begin::Actions-->
+									<div class="d-flex flex-stack pt-10">
+										<!--begin::Wrapper-->
+										<div class="me-2">
+											<button type="button" class="btn btn-lg btn-light-primary me-3" data-kt-stepper-action="previous">
+											<i class="ki-duotone ki-arrow-left fs-3 me-1">
+												<span class="path1"></span>
+												<span class="path2"></span>
+											</i>Back</button>
+										</div>
+										<!--end::Wrapper-->
+
+										<!--begin::Wrapper-->
+										<div>
+											
+											<button type="button" class="btn btn-lg btn-primary" data-kt-stepper-action="next" id="modify">Modify
 											<i class="ki-duotone ki-arrow-right fs-3 ms-1 me-0">
 												<span class="path1"></span>
 												<span class="path2"></span>

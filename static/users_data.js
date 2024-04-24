@@ -4,16 +4,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const pass = "************";
 
-  const barriersTable = document.getElementById("barriersTable");
+  const usersTable = document.getElementById("usersTable");
+
+  Swal.fire({
+    title: "Fetching Users data . . . ",
+    didOpen: () => {
+      Swal.showLoading();
+    },
+  });
 
   fetch(`http://${ipAddress}:${portep}/allusers`)
       .then(response => {
+
           if (!response.ok) {
+
+            Swal.fire({
+              text: "Error ",
+              icon: "warning",
+              buttonsStyling: false,
+              showConfirmButton: false,
+              timer: 1500,
+            })
               throw new Error("Network response was not ok");
           }
           return response.json();
       })
       .then(data => {
+
+        Swal.close();
+
+
           console.log(data);
           console.log("table" +data.users.length);
 
@@ -22,15 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
               const noDataMessageRow = document.createElement("tr");
               const noDataMessageCell = document.createElement("td");
               const span = document.createElement("span");
-              span.textContent = "No users found";
+              span.textContent = "No Users found";
               span.classList.add("text-dark", "fw-bold", "text-hover-primary", "d-block", "mb-1", "fs-6");
               noDataMessageCell.appendChild(span);
-              noDataMessageCell.colSpan = 10; // Span across all columns
-              noDataMessageCell.style.textAlign = "center"; // Center the text
+              noDataMessageCell.colSpan = 10; 
+              noDataMessageCell.style.textAlign = "center";
               noDataMessageRow.appendChild(noDataMessageCell);
-              barriersTable.appendChild(noDataMessageRow);
+              usersTable.appendChild(noDataMessageRow);
           } else {
-              // Users found, populate the table
               data.users.forEach(user => {
                   const newRow = document.createElement("tr");
 
@@ -63,11 +82,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                   newRow.appendChild(actionCell);
 
-                  barriersTable.appendChild(newRow);
+                  usersTable.appendChild(newRow);
               });
           }
       })
       .catch(error => {
+
+        Swal.close();
+
           console.error("Error fetching users:", error);
       });
 });
@@ -89,8 +111,24 @@ function createCell(content, addTextClasses) {
 function createActionCell(userId) {
   const cell = document.createElement("td");
 
+  const modifyButton = document.createElement("button");
+  modifyButton.classList.add("btn", "btn-sm", "fw-bold", "btn-primary");
+  modifyButton.innerHTML = `
+							<i class="ki-duotone ki-pencil fs-2">
+								<span class="path1"></span>
+								<span class="path2"></span>
+							</i>
+						`;
+  modifyButton.addEventListener("click", function () {
+    modifyusers(userId);
+  });
+  cell.appendChild(modifyButton);
+
+  cell.appendChild(document.createTextNode("\u00A0"));
+
+
   const deleteButton = document.createElement("button");
-  deleteButton.classList.add("btn", "btn-lg", "fw-bold", "btn-danger");
+  deleteButton.classList.add("btn", "btn-sm", "fw-bold", "btn-danger");
 
   deleteButton.innerHTML = `
 							<i class="ki-duotone ki-trash fs-2">
@@ -102,14 +140,14 @@ function createActionCell(userId) {
 							</i>
 						`;
   deleteButton.addEventListener("click", function () {
-    deleteBarrier(userId);
+    deleteuser(userId);
   });
   cell.appendChild(deleteButton);
 
   return cell;
 }
 
-function deleteBarrier(userId) {
+function deleteuser(userId) {
   Swal.fire({
     text: "Are you sure you want to delete?",
     icon: "warning",
@@ -129,6 +167,7 @@ function deleteBarrier(userId) {
       })
         .then((response) => {
           if (response.ok) {
+
             Swal.fire({
               text: "Deleted Successfully",
               icon: "success",
@@ -159,4 +198,129 @@ function deleteBarrier(userId) {
   });
 }
 
+
+function modifyusers(userId) {
+  fetch(`http://${ipAddress}:${portep}/userid/${userId}`)
+    .then((response) => {
+
+
+      if (response.ok) {
+
+        return response.json();
+      } else {
+
+        Swal.fire({
+          text: "Error ",
+          icon: "warning",
+          buttonsStyling: false,
+          showConfirmButton: false,
+          timer: 1500,
+        })
+        throw new Error("Failed to fetch user data");
+      }
+    })
+    .then((data) => {
+      const modifyNameInput = document.getElementById("name_modify");
+      const modifyIdInput = document.getElementById("id_modify");
+      const modifyPhoneInput = document.getElementById("phone_modify");
+      const modifyEmailInput = document.getElementById("email_modify");
+      const modifyPasswordInput = document.getElementById("password_modify");
+      const modifyLpn1Input = document.getElementById("lpn1_modify");
+      const modifyLpn2Input = document.getElementById("lpn2_modify");
+      const modifyLpn3Input = document.getElementById("lpn3_modify");
+      const modifyLpn4Input = document.getElementById("lpn4_modify");
+
+      if (
+        !modifyNameInput ||
+        !modifyIdInput ||
+        !modifyPhoneInput ||
+        !modifyEmailInput ||
+        !modifyPasswordInput ||
+        !modifyLpn1Input ||
+        !modifyLpn2Input ||
+        !modifyLpn3Input ||
+        !modifyLpn4Input
+      ) {
+        return;
+      }
+
+      modifyNameInput.value = data.user.name || "";
+      modifyIdInput.value = data.user.id || "";
+      modifyPhoneInput.value = data.user.phone_number || "";
+      modifyEmailInput.value = data.user.email || "";
+      modifyPasswordInput.value = "**********"; 
+      modifyLpn1Input.value = data.user.lpn1 || "";
+      modifyLpn2Input.value = data.user.lpn2 || "";
+      modifyLpn3Input.value = data.user.lpn3 || "";
+      modifyLpn4Input.value = data.user.lpn4 || "";
+
+      const modifyModal = new bootstrap.Modal(document.getElementById("kt_modal_modify"));
+      modifyModal.show();
+    })
+    
+    .catch((error) => {
+      Swal.fire({
+        icon: "error",
+        title: "Failed to fetch user data",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+    });
+
+  document.getElementById("modify").addEventListener("click", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name_modify").value;
+    const id = document.getElementById("id_modify").value;
+    const phone = document.getElementById("phone_modify").value;
+    const email = document.getElementById("email_modify").value;
+    const lpn1 = document.getElementById("lpn1_modify").value;
+    const lpn2 = document.getElementById("lpn2_modify").value;
+    const lpn3 = document.getElementById("lpn3_modify").value;
+    const lpn4 = document.getElementById("lpn4_modify").value;
+
+    const requestBody = {
+      name: name,
+      phone_number: phone,
+      email: email,
+      lpn1: lpn1,
+      lpn2: lpn2,
+      lpn3: lpn3,
+      lpn4: lpn4
+    };
+
+    fetch(`http://${ipAddress}:${portep}/modifyWeb/${userId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(requestBody),
+    })
+      .then((response) => {
+        if (response.ok) {
+          Swal.fire({
+            icon: "success",
+            title: "User Modified Successfully",
+            showConfirmButton: false,
+            timer: 1500,
+          }).then(function () {
+            location.reload(); // Reload the page after successful modification
+          });
+        } else {
+          throw new Error("Failed to modify user data");
+        }
+      })
+      .catch((error) => {
+        Swal.fire({
+          icon: "error",
+          title: "Failed to modify user data",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
+
+    const modifyModal = new bootstrap.Modal(document.getElementById("kt_modal_modify"));
+    modifyModal.hide(); // Hide the modal after modification
+  });
+}
 

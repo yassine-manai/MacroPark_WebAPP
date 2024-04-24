@@ -46,6 +46,28 @@ class UpdateUserData(BaseModel):
             }
         }
 
+class Updateweb(BaseModel):
+    name: str
+    email: str
+    phone_number: str
+    lpn1: str
+    lpn2: str
+    lpn3: str
+    lpn4: str
+
+    class Config:
+        schema_extra = {
+            "example": {
+                "name": "Yassine",
+                "phone_number": "93014027",
+                "email": "yas",
+                "lpn1": "1624 TU 199",
+                "lpn2": "1623 TU 199",
+                "lpn3": "1621 TU 199",
+                "lpn4": "1620 TU 199"
+            }
+        }
+
 
 class guestItem(BaseModel):
     id: int

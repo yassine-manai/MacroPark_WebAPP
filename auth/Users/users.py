@@ -1,9 +1,11 @@
 from fastapi import APIRouter, FastAPI, HTTPException, Body
-import random
 from fastapi.responses import JSONResponse
-from Models.items import UpdateUserData, userItem
+from Models.items import UpdateUserData, Updateweb, userItem
 from auth.DB.Connection import connect_users
 from fastapi.middleware.cors import CORSMiddleware
+
+import random
+import string
 
 app = FastAPI()
 
@@ -14,15 +16,22 @@ async def setup_db():
 
 
 def generate_unique_id():
-    return random.randint(100, 999)
+    # Generate a random integer in the range from 200 to 299
+    random_number = random.randint(200, 299)
+    
+    # Return the random number as a 32-bit integer
+    return random_number
+
 
 
 # Define routers
 Add_User = APIRouter()
 UserByEmail = APIRouter()
+UserById = APIRouter()
 User_List = APIRouter()
 Login_User = APIRouter()
 Modify_User = APIRouter()
+Modify_Web = APIRouter()
 Delete_User = APIRouter()
 
 app.add_middleware(
@@ -72,6 +81,19 @@ async def find_user_by_email(email: str):
     _, _, collection = await setup_db()
     
     user = await collection.find_one({'email': email})
+    
+    if user:
+        user['_id'] = str(user['_id'])
+        return {"user": user}  
+    else:
+        raise HTTPException(status_code=404, detail='User not found')
+    
+
+@UserById.get('/userid/{id}', tags=["Users"])
+async def find_user_by_email(id: int):
+    _, _, collection = await setup_db()
+    
+    user = await collection.find_one({'_id': id})
     
     if user:
         user['_id'] = str(user['_id'])
@@ -136,3 +158,30 @@ async def delete_user(user_id: str):
         raise HTTPException(status_code=400, detail='Invalid user ID format')
     except Exception as e:
         raise HTTPException(status_code=500, detail=f'Error deleting user: {str(e)}')
+
+
+
+@Modify_Web.put('/modifyWeb/{id}', tags=["Users"])
+async def update_user_id(id: int, data: Updateweb):
+    _, _, collection = await setup_db()
+    existing_user = await collection.find_one({'_id': id})
+    
+    if existing_user:
+        # Extract the fields to update from the data object
+        update_data = {
+            'name': data.name,
+            'email': data.email,
+            'phone_number': data.phone_number,
+            'lpn1': data.lpn1,
+            'lpn2': data.lpn2,
+            'lpn3': data.lpn3,
+            'lpn4': data.lpn4
+        }
+        
+        # Perform the update operation using '$set' operator
+        await collection.update_one({'_id': id}, {'$set': update_data})
+        
+        return {'message': 'User updated successfully'}
+    else:
+        raise HTTPException(status_code=404, detail='User not found')
+    

@@ -63,8 +63,8 @@ var KTCreateApp = (function () {
   };
 
   var initEventListeners = function () {
-    document.getElementById("add").addEventListener("click", function () {
-
+    document.getElementById("add").addEventListener("click", function () 
+    {
 
       validator.validate().then(function (status) {
         if (status === "Valid") {
@@ -72,7 +72,7 @@ var KTCreateApp = (function () {
           var ids = document.getElementById("id").value;
 
           var id = parseInt(ids, 10); 
-          console.log(id)
+          console.log(id);
 
           var phone = document.getElementById("phone").value;
           var email = document.getElementById("email").value;
@@ -95,6 +95,13 @@ var KTCreateApp = (function () {
           };
 
             console.log(formData);
+            
+  Swal.fire({
+    title: "Fetching Users data . . . ",
+    didOpen: () => {
+      Swal.showLoading();
+    },
+  });
 
           fetch(`http://${ipAddress}:${portep}/adduser`, {
             method: 'POST',
@@ -112,6 +119,9 @@ var KTCreateApp = (function () {
             return response.json();
           })
           .then(data => {
+            Swal.close();
+
+
             Swal.fire({
               icon: 'success',
               title: 'User   Added Successfully',

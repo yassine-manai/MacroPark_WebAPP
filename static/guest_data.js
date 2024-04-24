@@ -2,67 +2,93 @@ console.log(`IP Address: ${ipAddress}`);
 console.log(`Port: ${portep}`);
 
 
-      
-const open_cmd = "55 03 01 02 00 ED E7";
-const close_cmd = "55 03 01 02 00 ED E7";
-const lock_cmd = "55 03 01 01 01 A8 95";
-const unlock_cmd = "55 03 01 01 02 98 F6";
+Swal.fire({
+  title: "Fetching Guests data . . . ",
+  didOpen: () => {
+    Swal.showLoading();
+  },
+});
 
 
-fetch(`http://${ipAddress}:${portep}/Barrier`)
-  .then((response) => response.json())
+fetch(`http://${ipAddress}:${portep}/allguests`)
+  .then((response) => {
+    if (!response.ok) {
+      Swal.fire({
+        text: "Error ",
+        icon: "warning",
+        buttonsStyling: false,
+        showConfirmButton: false,
+        timer: 1500,
+      })
+
+      throw new Error(`Failed to fetch data: ${response.statusText}`);
+    }
+    return response.json();
+  })
   .then((data) => {
-    
-    console.log(data);
-    
-    const barriersTable = document.getElementById("barriersTable");
-    if (data.length === 0) {
-		const noDataMessageRow = document.createElement("tr");
-		const noDataMessageCell = document.createElement("td");
-		const span = document.createElement("span");
-		span.textContent = "No barrier found";
-		span.classList.add("text-dark", "fw-bold", "text-hover-primary", "d-block", "mb-1", "fs-6");
-		noDataMessageCell.appendChild(span);
-		noDataMessageCell.colSpan = 10; // Span across all columns
-		noDataMessageCell.style.textAlign = "center"; // Center the text
-		noDataMessageRow.appendChild(noDataMessageCell);
-		barriersTable.appendChild(noDataMessageRow);
+
+    Swal.close();
+
+    console.log("Fetched data:", data);
+
+    const guestTable = document.getElementById("guestsTable");
+    const guests = data.guest; 
+
+    if (!Array.isArray(guests) || guests.length === 0) {
+      const noDataMessageRow = document.createElement("tr");
+      const noDataMessageCell = document.createElement("td");
+      const span = document.createElement("span");
+      span.textContent = "No Guests found";
+      span.classList.add(
+        "text-dark",
+        "fw-bold",
+        "text-hover-primary",
+        "d-block",
+        "mb-1",
+        "fs-6"
+      );
+      noDataMessageCell.appendChild(span);
+      noDataMessageCell.colSpan = 10;
+      noDataMessageCell.style.textAlign = "center"; 
+      noDataMessageRow.appendChild(noDataMessageCell);
+      guestTable.appendChild(noDataMessageRow);
     } else {
-      data.forEach((barrier) => {
+      guests.forEach((guest) => {
         const newRow = document.createElement("tr");
 
-        const idCell = createCell(barrier[1], true);
-        const nameCell = createCell(barrier[0], true);
-        const typeCell = createCell(barrier[2], true);
-        const ipCell = createCell(barrier[3], true);
-        const portCell = createCell(barrier[4], true);
-        const opCmdCell = createCell(open_cmd, true);
-        const clCmdCell = createCell(close_cmd, true);
-        const lkCmdCell = createCell(lock_cmd, true);
-        const ukCmdCell = createCell(unlock_cmd, true);
-        const actionCell = createActionCell(barrier[1]);
+        const idCell = createCell(guest._id, true);
+        const nameCell = createCell(guest.name, true);
+        const phoneCell = createCell(guest.phoneNumber, true);
+        const emailCell = createCell(guest.email, true);
+        console.log("email"+guest.email)
+        const passCell = createCell("**********", true);
+        const lpn1Cell = createCell(guest.lpn1, true);
+        const lpn2Cell = createCell(guest.lpn2, true);
+        const lpn3Cell = createCell(guest.lpn3, true);
+        const lpn4Cell = createCell(guest.lpn4, true);
 
+
+
+        const actionCell = createActionCell(guest.email); 
+        console.log(guest.email);
 
         newRow.appendChild(idCell);
         newRow.appendChild(nameCell);
-        newRow.appendChild(typeCell);
+        newRow.appendChild(phoneCell);
+        newRow.appendChild(emailCell);
+        newRow.appendChild(passCell);
 
-        newRow.appendChild(ipCell);
-        newRow.appendChild(portCell);
-        newRow.appendChild(opCmdCell);
-        console.log(opCmdCell)
-
-        newRow.appendChild(clCmdCell);
-        newRow.appendChild(lkCmdCell);
-        newRow.appendChild(ukCmdCell);
-
+        newRow.appendChild(lpn1Cell ? lpn1Cell:"Empty");
+        newRow.appendChild(lpn2Cell ? lpn2Cell:"Empty");
+        newRow.appendChild(lpn3Cell ? lpn3Cell:"Empty");
+        newRow.appendChild(lpn4Cell ? lpn4Cell:"Empty");
         newRow.appendChild(actionCell);
 
-        barriersTable.appendChild(newRow);
+        guestTable.appendChild(newRow);
       });
     }
   })
-  .catch((error) => console.error("Error fetching data:", error));
+  .catch((error) => console.error("Error fetching or processing data:", error));
 
 function createCell(content, addTextClasses) {
   const cell = document.createElement("td");
@@ -84,43 +110,38 @@ function createCell(content, addTextClasses) {
   return cell;
 }
 
-function createActionCell(barrierId) {
+function createActionCell(guestEmail) {
   const cell = document.createElement("td");
 
-  const modifyButton = document.createElement("button");
-  modifyButton.classList.add("btn", "btn-sm", "fw-bold", "btn-primary");
-  modifyButton.innerHTML = `
-							<i class="ki-duotone ki-plus fs-1">
-
-							</i>
-						`;
-  modifyButton.addEventListener("click", function () {
-    modifyBarriers(barrierId);
+  const acceptButton = document.createElement("button");
+  acceptButton.classList.add("btn", "btn-sm", "fw-bold", "btn-primary");
+  acceptButton.innerHTML = `<i class="ki-duotone ki-plus fs-1"></i>`;
+  acceptButton.addEventListener("click", function () {
+    acceptGuest(guestEmail);
   });
-  cell.appendChild(modifyButton);
+  cell.appendChild(acceptButton);
 
   cell.appendChild(document.createTextNode("\u00A0"));
 
-  const deleteButton = document.createElement("button");
-  deleteButton.classList.add("btn", "btn-sm", "fw-bold", "btn-danger");
-
-  deleteButton.innerHTML = `
-							<i class="ki-duotone ki-cross fs-1">
-								<span class="path1"></span>
-								<span class="path2"></span>
-							</i>
-						`;
-  deleteButton.addEventListener("click", function () {
-    deleteBarrier(barrierId);
+  const declineButton = document.createElement("button");
+  declineButton.classList.add("btn", "btn-sm", "fw-bold", "btn-danger");
+  declineButton.innerHTML = `
+    <i class="ki-duotone ki-cross fs-1">
+      <span class="path1"></span>
+      <span class="path2"></span>
+    </i>
+  `;
+  declineButton.addEventListener("click", function () {
+    declineGuest(guestEmail);
   });
-  cell.appendChild(deleteButton);
+  cell.appendChild(declineButton);
 
   return cell;
 }
 
-function deleteBarrier(barrierId) {
+function declineGuest(guestEmail) {
   Swal.fire({
-    text: "Are you sure you want to delete?",
+    text: "Are you sure you want to decline this user?",
     icon: "warning",
     showCancelButton: true,
     confirmButtonText: "Yes, delete it!",
@@ -132,174 +153,70 @@ function deleteBarrier(barrierId) {
     },
   }).then((result) => {
     if (result.isConfirmed) {
-      fetch(`http://${ipAddress}:${portep}/delete/${barrierId}`, {
+
+      fetch(`http://${ipAddress}:${portep}/delete_guest/${guestEmail}`, {
         method: "DELETE",
       })
         .then((response) => {
           if (response.ok) {
             Swal.fire({
-              text: "Deleted Successfully",
+              text: "Declined Successfully",
+              icon: "success",
+              buttonsStyling: false,
+              showConfirmButton: false,
+              timer: 1500,
+            }).then(() => {
+              KTUtil.scrollTop(); 
+              location.reload();
+            });
+          } else {
+            throw new Error("Failed to decline user");
+          }
+        })
+        .catch((error) =>
+          console.error(`Error declining user with Email ${guestEmail}:`, error)
+        );
+    }
+  });
+}
+
+
+function acceptGuest(guestEmail) {
+  Swal.fire({
+    text: "Are you sure you want to accept this user?",
+    icon: "warning",
+    showCancelButton: true,
+    confirmButtonText: "Yes, accept it!",
+    cancelButtonText: "No, cancel",
+    buttonsStyling: false,
+    customClass: {
+      confirmButton: "btn btn-success",
+      cancelButton: "btn btn-secondary",
+    },
+  }).then((result) => {
+    if (result.isConfirmed) {
+      fetch(`http://${ipAddress}:${portep}/approve_guest/${guestEmail}`, {
+        method: "GET", 
+      })
+        .then((response) => {
+          if (response.ok) {
+            Swal.fire({
+              text: "Accepted Successfully",
               icon: "success",
               buttonsStyling: false,
               showConfirmButton: false,
               timer: 1500,
             }).then(() => {
               KTUtil.scrollTop();
-                location.reload();
-
+              location.reload();
             });
           } else {
-            Swal.fire({
-              text: " Error",
-              icon: "error",
-              buttonsStyling: false,
-              confirmButtonText: "Ok, got it!",
-              customClass: { confirmButton: "btn btn-dark" },
-            }).then(() => {
-              KTUtil.scrollTop();
-            });
+            throw new Error("Failed to accept user");
           }
         })
         .catch((error) =>
-          console.error(`Error deleting barrier with id ${barrierId}:`, error)
+          console.error(`Error accepting user with Email ${guestEmail}:`, error)
         );
     }
-  });
-}
-
-function modifyBarriers(barrierId) {
-  fetch(`http://${ipAddress}:${portep}/Barrier/${barrierId}`)
-    .then((response) => {
-      if (response.ok) {
-        return response.json();
-      } else {
-        throw new Error("Failed to fetch barrier data");
-      }
-    })
-    .then((data) => {
-      const modifyNameInput = document.getElementById("name_modify");
-      const modifyIdInput = document.getElementById("id_modify");
-      const modifyTypeInput = document.getElementById("type_modify");
-      const modifyIpInput = document.getElementById("ip_modify");
-      const modifyPortInput = document.getElementById("port_modify");
-      const modifyOpenCodeInput = document.getElementById("open_modify");
-      const modifyCloseCodeInput = document.getElementById("close_modify");
-      const modifyLockCodeInput = document.getElementById("lock_modify");
-      const modifyUnlockCodeInput = document.getElementById("unlock_modify");
-
-      if (
-        !modifyIdInput ||
-        !modifyNameInput ||
-        !modifyTypeInput ||
-        !modifyIpInput ||
-        !modifyPortInput ||
-        !modifyOpenCodeInput ||
-        !modifyCloseCodeInput ||
-        !modifyLockCodeInput ||
-        !modifyUnlockCodeInput
-      ) {
-        return;
-      }
-
-
-
-
-      modifyNameInput.value = data.name || "";
-      modifyIdInput.value = data.id || "";
-      modifyTypeInput.value = data.type || "";
-      modifyIpInput.value = data.ip || "";
-      modifyPortInput.value = data.port || "";
-      
-      modifyOpenCodeInput.value = open_cmd;
-      modifyCloseCodeInput.value = close_cmd;
-      modifyLockCodeInput.value = lock_cmd;
-      modifyUnlockCodeInput.value = unlock_cmd;
-
-      console.log(modifyCloseCodeInput.value);
-
-      const modifyModal = new bootstrap.Modal(
-        document.getElementById("kt_modal_modify")
-      );
-      modifyModal.show();
-    })
-
-    .catch((error) => {
-      Swal.fire({
-        icon: "error",
-        title: "Failed !",
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    });
-
-  document.getElementById("modify").addEventListener("click", function (event) {
-    event.preventDefault();
-
-    const name = document.getElementById("name_modify").value;
-    const type = document.getElementById("type_modify").value;
-    const id = document.getElementById("id_modify").value;
-    const ip = document.getElementById("ip_modify").value;
-    const port = document.getElementById("port_modify").value;
-    const opCmd = document.getElementById("open_modify").value;
-    const clCmd = document.getElementById("close_modify").value;
-    const lkCmd = document.getElementById("lock_modify").value;
-    const ukCmd = document.getElementById("unlock_modify").value;
-
-    const requestBody = {
-      name: name,
-      id: id,
-      type: type,
-      ip: ip,
-      port: port,
-      op_cmd: opCmd,
-      cl_cmd: clCmd,
-      lk_cmd: lkCmd,
-      uk_cmd: ukCmd,
-    };
-
-    fetch(`http://${ipAddress}:${portep}/modify/${barrierId}`, 
-    {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(requestBody),
-    })
-      .then((response) => {
-        if (response.ok) {
-          Swal.fire({
-            icon: "success",
-            title: "Barrier Modified Successfully",
-            showConfirmButton: false,
-            timer: 1500,
-          }).then(function () {
-            KTUtil.scrollTop();
-           location.reload();
-
-          });
-        } else {
-          throw new Error("Failed to modify barrier data");
-          Swal.fire({
-            icon: "error",
-            title: "Failed to modify barrier data",
-            showConfirmButton: false,
-            timer: 1500,
-          });
-        }
-      })
-      .catch((error) => {
-        Swal.fire({
-          icon: "error",
-          title: "Failed",
-          test: "Try again !",
-          showConfirmButton: false,
-          timer: 1500,
-        });
-      });
-
-    const modifyModal = new bootstrap.Modal(
-      document.getElementById("kt_modal_modify")
-    );
-    modifyModal.hide();
   });
 }

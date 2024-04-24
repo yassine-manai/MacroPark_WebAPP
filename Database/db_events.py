@@ -22,7 +22,7 @@ def get_db_events():
                                 ip_user TEXT,
                                 meth TEXT
                             )'''
-                       )
+                       )    
         
         conn.commit()
         logger.info("Created 'events' table")
