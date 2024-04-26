@@ -1,6 +1,6 @@
 from Database.db_events import get_db_events
 
-#ADD
+#ADD Open Events 
 def add_open_event(barrier_id: int, ip_user: str, status_code: int, extradata: str):
     status = {
         500: "Barrier Disconnected - Open Action",
@@ -16,7 +16,7 @@ def add_open_event(barrier_id: int, ip_user: str, status_code: int, extradata: s
     conn.close()
 
 
-#Close Event Add
+#ADD Close Events
 def add_close_event(barrier_id: int, ip_user: str, status_code: int, extradata: str):
     status = {
         500: "Barrier Disconnected - Close Action",
@@ -32,6 +32,7 @@ def add_close_event(barrier_id: int, ip_user: str, status_code: int, extradata: 
     conn.close()
 
 
+# ADD Lock Events 
 def add_lock_event(barrier_id: int, ip_user: str, status_code: int, extradata: str):
     status = {
         500: "Barrier Disconnected - Lock Action",
@@ -47,6 +48,7 @@ def add_lock_event(barrier_id: int, ip_user: str, status_code: int, extradata: s
     conn.close()
 
 
+# ADD Unlock Events 
 def add_unlock_event(barrier_id: int, ip_user: str, status_code: int, extradata: str):
     status = {
         500: "Barrier Disconnected - Unlock Action",

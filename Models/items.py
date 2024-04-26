@@ -4,12 +4,22 @@ from fastapi import HTTPException
 from Config.log_config import logger
 import socket
 
+
+# Barrier Class
 class BarrierItem(BaseModel):
     name:str
     id: int
     barrierType:str
     ip: str
     port: int = 52719
+
+
+class BarrierCmd(BaseModel):
+    op_cmd: str = "55 03 01 01 00 B8 B4"
+    cl_cmd: str = "55 03 01 02 00 ED E7"
+    lk_cmd: str = "55 03 01 01 01 A8 95"
+    uk_cmd: str = "55 03 01 01 02 98 F6"
+    st_cmd: str = "55 02 02 02 65 FE"
 
 
 class ModifiedBarrierItem(BaseModel):
@@ -19,6 +29,8 @@ class ModifiedBarrierItem(BaseModel):
     ip: str
     port: int
 
+
+# User Class
 class userItem(BaseModel):
     id: int
     name: str
@@ -81,6 +93,7 @@ class guestItem(BaseModel):
     lpn4: str
 
 
+# Action to barrier 
 def send_action(ip_address, port, hex_code, action):
     try:
         # Create a TCP socket

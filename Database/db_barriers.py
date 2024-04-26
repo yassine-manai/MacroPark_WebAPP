@@ -8,7 +8,7 @@ def get_db_barrier():
     conn = sqlite3.connect(DB_FILE_PATH_barrier)
     cursor = conn.cursor()
     
-    # Check if the 'barriers' table exists
+    # Check barriers table exists
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='barriers'")
     table_barrier_exists = cursor.fetchone()
 
@@ -24,6 +24,6 @@ def get_db_barrier():
                             )''')  
         
         conn.commit()
-        logger.info("Created 'barriers' table")
+        logger.info("Created barriers table")
 
     return conn, cursor

@@ -15,6 +15,7 @@ Barrier_List = APIRouter()
 BarrierById = APIRouter()   
 Modify_barrier = APIRouter()
 
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -23,6 +24,8 @@ app.add_middleware(
     allow_headers=["Content-Type"], 
 )
 
+
+# Add barrier Endpoint - API()
 @Add_barrier.post("/add", tags=["Barriers Data"])
 async def add_barrier(barrier_item: items.BarrierItem):
     conn, cursor = get_db_barrier()
@@ -32,7 +35,6 @@ async def add_barrier(barrier_item: items.BarrierItem):
         "SELECT * FROM barriers WHERE id = ?", (barrier_item.id,)
     ).fetchone()
 
-    # If a barrier with the same ID exists, return an error
     if existing_barrier:
         conn.close()
         raise HTTPException(status_code=400, detail={"errordata": 404,"message":"Barrier with the same ID already exists"})
@@ -50,6 +52,7 @@ async def add_barrier(barrier_item: items.BarrierItem):
 
 
 
+# Delete Barrier Endpoint - API()
 @Delete_barrier.delete("/delete/{barrier_id}" , tags=["Barriers Data"])
 async def delete_barrier(barrier_id: int):
     
@@ -58,6 +61,7 @@ async def delete_barrier(barrier_id: int):
     return {"message": "Barrier deleted successfully"}
 
 
+# Get barrier List Endpoint - API()
 @Barrier_List.get("/Barrier", tags=["Barriers Data"])
 async def get_all_barriers():
     conn, cursor = get_db_barrier()
@@ -70,6 +74,7 @@ async def get_all_barriers():
 
 
 
+# Get Barrier By Id Endpoint - API()
 @BarrierById.get("/Barrier/{id}", tags=["Barriers Data"])
 async def get_barrier_by_id(id: int):
     conn, cursor = get_db_barrier()
@@ -90,6 +95,7 @@ async def get_barrier_by_id(id: int):
     return JSONResponse(content=barrier, status_code=200)
 
 
+# Modify Barrier Data Endpoint - API()
 @Modify_barrier.put("/modify/{barrier_id}", tags=["Barriers Data"])
 async def modify_barrier(barrier_id: int, barrier_item: items.ModifiedBarrierItem):
 

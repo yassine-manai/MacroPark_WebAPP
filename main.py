@@ -19,8 +19,6 @@ from Events.Get_Events import *
 from Events.Delete_Event import *
 from auth.Users.users import *
 from auth.Guests.guests import *
-
-
 from Config.config import APP_PORT
 
 
@@ -48,7 +46,6 @@ tags_metadata = [
     },
 ]
 
-# Initialize FastAPI application
 app = FastAPI(
     title="Scheidt & Bachmann - Parking Managment System ",
     openapi_tags=tags_metadata,
@@ -68,11 +65,11 @@ app.add_middleware(
     allow_headers=["Content-Type"],
 )
 
-
+#Web Endpoint using Jinja
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
-# Users Data Endpoints
+# Users Data Endpoints ------------------------------------------------------------- <-- Begin -->
 app.include_router(Add_User)
 app.include_router(UserByEmail)
 app.include_router(UserById)
@@ -82,7 +79,7 @@ app.include_router(Modify_User)
 app.include_router(Modify_Web)
 app.include_router(Delete_User)
 
-# Guests Data Endpoints
+# Guests Data Endpoints ------------------------------------------------------------- <-- Begin -->
 app.include_router(Add_Guest)
 app.include_router(Get_Guests)
 app.include_router(Delete_Guest)
@@ -90,7 +87,7 @@ app.include_router(GuestByEmail)
 app.include_router(GuestById)
 app.include_router(Approuve_Guest)
 
-# Barrier Controller Endpoints
+# Barrier Controller Endpoints ------------------------------------------------------ <-- Begin -->
 app.include_router(Open_barrier)
 app.include_router(Close_barrier)
 app.include_router(Lock_barrier)
@@ -98,14 +95,14 @@ app.include_router(Unlock_barrier)
 app.include_router(Status)
 
 
-# Barrier Data Endpoints
+# Barrier Data Endpoints ------------------------------------------------------------- <-- Begin -->
 app.include_router(Add_barrier)
 app.include_router(BarrierById)
 app.include_router(Barrier_List)
 app.include_router(Modify_barrier)
 app.include_router(Delete_barrier)
 
-# Events Data Endpoints
+# Events Data Endpoints ------------------------------------------------------------- <-- Begin -->
 app.include_router(Event_List)
 app.include_router(EventById)
 app.include_router(Delete_event)
@@ -113,7 +110,7 @@ app.include_router(Delete_all_event)
 
 
 
-# Define route to render Jinja2 templates
+# Web Endpoint using JINJA ------------------------------------------------------------------------------------ <-- Begin -->
 @app.get("/")
 @app.get("/login.html", tags=["UI"])
 async def render_template(request: Request):
@@ -169,7 +166,10 @@ async def render_template(request: Request):
         return HTMLResponse(content=content)
     except TemplateNotFound:
         raise HTTPException(status_code=404, detail="Template not found")
+    
+# Web Endpoint using JINJA ------------------------------------------------------------------------------------ <-- End -->
 
-# APP Runner
+
+# APP Main Runner
 if __name__ == "__main__":  
     uvicorn.run("main:app", host="0.0.0.0", port=APP_PORT, reload=True)

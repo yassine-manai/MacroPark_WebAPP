@@ -1,7 +1,6 @@
 console.log(`IP Address: ${ipAddress}`);
 console.log(`Port: ${portep}`);
 
-
       
 const open_cmd = "55 03 01 02 00 ED E7";
 const close_cmd = "55 03 01 02 00 ED E7";
@@ -9,10 +8,18 @@ const lock_cmd = "55 03 01 01 01 A8 95";
 const unlock_cmd = "55 03 01 01 02 98 F6";
 
 
+Swal.fire({
+  title: "Fetching barriers data . . . ",
+  didOpen: () => {
+    Swal.showLoading();
+  },
+});
+
 fetch(`http://${ipAddress}:${portep}/Barrier`)
   .then((response) => response.json())
   .then((data) => {
-    
+    Swal.close();
+
     console.log(data);
     
     const barriersTable = document.getElementById("barriersTable");
@@ -23,8 +30,8 @@ fetch(`http://${ipAddress}:${portep}/Barrier`)
 		span.textContent = "No barrier found";
 		span.classList.add("text-dark", "fw-bold", "text-hover-primary", "d-block", "mb-1", "fs-6");
 		noDataMessageCell.appendChild(span);
-		noDataMessageCell.colSpan = 10; // Span across all columns
-		noDataMessageCell.style.textAlign = "center"; // Center the text
+		noDataMessageCell.colSpan = 10; 
+		noDataMessageCell.style.textAlign = "center"; 
 		noDataMessageRow.appendChild(noDataMessageCell);
 		barriersTable.appendChild(noDataMessageRow);
     } else {

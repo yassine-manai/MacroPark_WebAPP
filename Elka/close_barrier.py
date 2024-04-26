@@ -5,7 +5,7 @@ from Models.items import send_action_with_timeout
 from Config.log_config import logger
 import asyncio
 
-# Routing for the API endpoint
+# Routing - API endpoint
 Close_barrier = APIRouter()
 
 TIMEOUT = 10
@@ -37,7 +37,7 @@ async def close_barrier_by_id(request: Request, id: int, extradata: str = ""):
         raise HTTPException(status_code=500, detail={"errordata": 500})
 
 
-    add_close_event(id, ip_user, status_code, extradata)  # Adding event regardless of response status code
+    add_close_event(id, ip_user, status_code, extradata)  # Adding event
 
     if response_data is not None:
         return response_data

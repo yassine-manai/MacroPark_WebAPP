@@ -1,7 +1,7 @@
 from Database.db_barriers import get_db_barrier
 from Models import items
 
-
+# Modify barrier Data Function
 def modify_barrier_rq(barrier_id: int, barrier_item: items.ModifiedBarrierItem):
 
     conn, cursor = get_db_barrier()
@@ -26,6 +26,9 @@ def modify_barrier_rq(barrier_id: int, barrier_item: items.ModifiedBarrierItem):
 
     return barrier_item
 
+
+
+#Delete barrier Function
 def delete_barrier_rq(barrier_id: int):
     conn, cursor = get_db_barrier()
     cursor.execute('''DELETE FROM barriers WHERE id = ?''', (barrier_id,))

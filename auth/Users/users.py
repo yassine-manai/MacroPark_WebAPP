@@ -1,30 +1,26 @@
 from fastapi import APIRouter, FastAPI, HTTPException, Body
-from fastapi.responses import JSONResponse
-from Models.items import UpdateUserData, Updateweb, userItem
+from Models.items import UpdateUserData, Updateweb
 from auth.DB.Connection import connect_users
 from fastapi.middleware.cors import CORSMiddleware
 
 import random
-import string
 
 app = FastAPI()
 
+# Database connection
 async def setup_db():
-    # Connect to MongoDB
     client, db, collection = await connect_users()
     return client, db, collection
 
 
+# Generate random ID
 def generate_unique_id():
-    # Generate a random integer in the range from 200 to 299
     random_number = random.randint(200, 299)
-    
-    # Return the random number as a 32-bit integer
     return random_number
 
 
 
-# Define routers
+# Define routers - APIs()
 Add_User = APIRouter()
 UserByEmail = APIRouter()
 UserById = APIRouter()
@@ -34,37 +30,31 @@ Modify_User = APIRouter()
 Modify_Web = APIRouter()
 Delete_User = APIRouter()
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["GET", "POST", "OPTIONS", "PUT", "DELETE"], 
-    allow_headers=["Content-Type"], 
-)
 
 
-# Read operation (get all users)
+# Get all Users - API()
 @User_List.get('/allusers', tags=["Users"])
 async def get_all_users():
     _, _, collection = await setup_db()
     
     users = await collection.find().to_list(length=None)
     
-    # Convert MongoDB ObjectId to string for serialization
     formatted_users = []
     for user in users:
-        user['_id'] = str(user['_id'])  # Convert ObjectId to string
+        user['_id'] = str(user['_id'])
         formatted_users.append(user)
     
     return {"users": formatted_users}
 
 
 
-# Define route handlers
+# Add user - APIs()
 @Add_User.post('/adduser', tags=["Users"])
 async def addUser(data: dict = Body(...)):
     _, _, collection = await setup_db()
+
     existing_user = await collection.find_one({'email': data['email']})
+    
     if existing_user:
         raise HTTPException(status_code=400, detail='User with the same email already exists')
     else:
@@ -75,7 +65,7 @@ async def addUser(data: dict = Body(...)):
 
 
 
-# Read operation (get a user by email)
+#Get User by Email
 @UserByEmail.get('/user/{email}', tags=["Users"])
 async def find_user_by_email(email: str):
     _, _, collection = await setup_db()
@@ -89,6 +79,8 @@ async def find_user_by_email(email: str):
         raise HTTPException(status_code=404, detail='User not found')
     
 
+
+#Get user by ID - API()
 @UserById.get('/userid/{id}', tags=["Users"])
 async def find_user_by_email(id: int):
     _, _, collection = await setup_db()
@@ -98,32 +90,33 @@ async def find_user_by_email(id: int):
     if user:
         user['_id'] = str(user['_id'])
         return {"user": user}  
+    
     else:
         raise HTTPException(status_code=404, detail='User not found')
     
 
-# User sign-in endpoint - login
+# User sign-in Endpoint - LOGIN (MOBILE APP)
 @Login_User.post('/signin', tags=["Users"])
 async def sign_in(data: dict = Body(...)):
     _, _, collection = await setup_db()
     user = await collection.find_one({'email': data['email']})
+
     if user and user['password'] == data['password']:
-        # Extract the user ID from the user document
         id = str(user['_id'])
         return {'message': 'User signed in successfully', 'userId': id}
+    
     else:
         raise HTTPException(status_code=401, detail='User not found or password incorrect')
     
 
 
-
+# Modify User Endpoint - API()
 @Modify_User.put('/modifyUser/{email}', tags=["Users"])
 async def update_user(email: str, data: UpdateUserData):
     _, _, collection = await setup_db()
     existing_user = await collection.find_one({'email': email})
     
     if existing_user:
-        # Extract the fields to update from the data object
         update_data = {
             'name': data.name,
             'email': data.email,
@@ -131,7 +124,6 @@ async def update_user(email: str, data: UpdateUserData):
             'password': data.password
         }
         
-        # Perform the update operation using '$set' operator
         await collection.update_one({'email': email}, {'$set': update_data})
         
         return {'message': 'User updated successfully'}
@@ -139,35 +131,38 @@ async def update_user(email: str, data: UpdateUserData):
         raise HTTPException(status_code=404, detail='User not found')
     
 
+# Delete User Endpoint - API()
 @Delete_User.delete('/deleteUser/{user_id}', tags=["Users"])
 async def delete_user(user_id: str):
+
     try:
         _, _, collection = await setup_db()
         
-        # Convert user_id to integer
-        user_id_int = int(user_id)
-        
-        # Assuming 'id' is the custom identifier field stored as an integer
+        user_id_int = int(user_id)        
         existing_user = await collection.find_one({'_id': user_id_int})
+
         if existing_user:
             await collection.delete_one({'_id': user_id_int})
             return {'message': 'User deleted successfully'}
         else:
             raise HTTPException(status_code=404, detail=f'User with ID {user_id} not found')
+        
     except ValueError:
         raise HTTPException(status_code=400, detail='Invalid user ID format')
+    
     except Exception as e:
         raise HTTPException(status_code=500, detail=f'Error deleting user: {str(e)}')
 
 
 
+# Modify User from the Web GUI Endpoint - API()
 @Modify_Web.put('/modifyWeb/{id}', tags=["Users"])
 async def update_user_id(id: int, data: Updateweb):
     _, _, collection = await setup_db()
     existing_user = await collection.find_one({'_id': id})
     
     if existing_user:
-        # Extract the fields to update from the data object
+
         update_data = {
             'name': data.name,
             'email': data.email,
@@ -178,10 +173,9 @@ async def update_user_id(id: int, data: Updateweb):
             'lpn4': data.lpn4
         }
         
-        # Perform the update operation using '$set' operator
         await collection.update_one({'_id': id}, {'$set': update_data})
-        
         return {'message': 'User updated successfully'}
+    
     else:
         raise HTTPException(status_code=404, detail='User not found')
     

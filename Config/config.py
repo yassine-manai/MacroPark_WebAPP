@@ -12,8 +12,6 @@ APP_PORT =  int(os.getenv("APP_PORT")) if os.getenv("APP_PORT") else config.geti
 DB_FILE_PATH_barrier = "./Database/DB/barriers.db"
 DB_FILE_PATH_events = "./Database/DB/events.db"
 
-    
-
 
 def replace_line_with_substring(file_path, substring, new_line):
 
