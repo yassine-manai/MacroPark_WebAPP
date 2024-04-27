@@ -60,7 +60,6 @@ fetch(`http://${ipAddress}:${portep}/allguests`)
         const nameCell = createCell(guest.name, true);
         const phoneCell = createCell(guest.phoneNumber, true);
         const emailCell = createCell(guest.email, true);
-        console.log("email"+guest.email)
         const passCell = createCell("**********", true);
         const lpn1Cell = createCell(guest.lpn1, true);
         const lpn2Cell = createCell(guest.lpn2, true);

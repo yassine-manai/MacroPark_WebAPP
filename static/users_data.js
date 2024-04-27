@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
                   const idCell = createCell(user._id, true);
                   console.log("hello"+idCell);
                   const nameCell = createCell(user.name, true);
-                  const phone = createCell(user.phone_number, true);
+                  const phone = createCell(user.phoneNumber, true);
                   const email = createCell(user.email, true);
                   const pass = createCell("**********", true);
                   const lpn1 = createCell(user.lpn1, true);
@@ -246,7 +246,7 @@ function modifyusers(userId) {
 
       modifyNameInput.value = data.user.name || "";
       modifyIdInput.value = data.user.id || "";
-      modifyPhoneInput.value = data.user.phone_number || "";
+      modifyPhoneInput.value = data.user.phoneNumber || "";
       modifyEmailInput.value = data.user.email || "";
       modifyPasswordInput.value = "**********"; 
       modifyLpn1Input.value = data.user.lpn1 || "";
@@ -281,7 +281,7 @@ function modifyusers(userId) {
 
     const requestBody = {
       name: name,
-      phone_number: phone,
+      phoneNumber: phone,
       email: email,
       lpn1: lpn1,
       lpn2: lpn2,

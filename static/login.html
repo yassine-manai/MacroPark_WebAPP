@@ -142,11 +142,12 @@
                             icon: "success",
                             title: `Welcome ${email}`,
                             showConfirmButton: false,
+							timer: 3000
                          });
-                        window.location.href = "stats.html";
+                        window.location.href = "static/users.html";
                     } else {
                         Swal.fire({
-                            icon: "error",
+                            icon: "error",	
                             title: `Error `,
                             text: `Check your email & password`,
                             showConfirmButton: false,

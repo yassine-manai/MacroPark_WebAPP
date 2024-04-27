@@ -34,7 +34,7 @@ class ModifiedBarrierItem(BaseModel):
 class userItem(BaseModel):
     id: int
     name: str
-    phone_number: str
+    phoneNumber: str
     email: str
     password: str
     lpn1: str
@@ -45,7 +45,7 @@ class userItem(BaseModel):
 class UpdateUserData(BaseModel):
     name: str
     email: str
-    phone_number: str
+    phoneNumber: str
     password: str
 
     class Config:
@@ -53,7 +53,7 @@ class UpdateUserData(BaseModel):
             "example": {
                 "name": "Name",
                 "email": "mail@example.com",
-                "phone_number": "1234567890",
+                "phoneNumber": "1234567890",
                 "password": "password"
             }
         }
@@ -61,7 +61,7 @@ class UpdateUserData(BaseModel):
 class Updateweb(BaseModel):
     name: str
     email: str
-    phone_number: str
+    phoneNumber: str
     lpn1: str
     lpn2: str
     lpn3: str
@@ -71,7 +71,7 @@ class Updateweb(BaseModel):
         schema_extra = {
             "example": {
                 "name": "Yassine",
-                "phone_number": "93014027",
+                "phoneNumber": "93014027",
                 "email": "yas",
                 "lpn1": "1624 TU 199",
                 "lpn2": "1623 TU 199",
@@ -84,7 +84,7 @@ class Updateweb(BaseModel):
 class guestItem(BaseModel):
     id: int
     name: str
-    phone_number: str
+    phoneNumber: str
     email: str
     password: str
     lpn1: str

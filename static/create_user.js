@@ -85,7 +85,7 @@ var KTCreateApp = (function () {
           var formData = {
             name: name,
             id: id,
-            phone_number: phone,
+            phoneNumber: phone,
             email : email,
             password: password,
             lpn1: lpn1,

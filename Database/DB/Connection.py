@@ -18,6 +18,11 @@ async def connect_events():
     return client, db, collection
 
 
-async def connect_events():
+async def connect_config():
     collection = db.Config
+    return client, db, collection
+
+
+async def connect_Lpns():
+    collection = db.Lpns
     return client, db, collection
