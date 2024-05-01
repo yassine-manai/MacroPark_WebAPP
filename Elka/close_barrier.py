@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException, Request
 from Database.Requests.req_control import Close_rq
-from Events.Add_Events import add_close_event
+from Events.BarrierEvents.Add_Events import add_close_event
 from Models.items import send_action_with_timeout
 from Config.log_config import logger
 import asyncio

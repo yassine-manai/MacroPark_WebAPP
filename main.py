@@ -14,9 +14,11 @@ from Elka.status_barrier import Status
 from Elka.unlock_barrier import Unlock_barrier
 from Elka.lock_barrier import Lock_barrier
 
+
 from Endpoints.barrier_Endpoint import *
-from Events.Get_Events import *
-from Events.Delete_Event import *
+from Events.BarrierEvents.Get_Events import Event_List, EventById
+from Events.BarrierEvents.Delete_Event import *
+from Events.UserEvents.users_events import UserLogsList
 from auth.Users.users import *
 from auth.Guests.guests import *
 from Config.config import APP_PORT
@@ -107,6 +109,11 @@ app.include_router(Event_List)
 app.include_router(EventById)
 app.include_router(Delete_event)
 app.include_router(Delete_all_event)
+
+
+# User Logs Data Endpoints ------------------------------------------------------------- <-- Begin -->
+app.include_router(UserLogsList)
+
 
 
 

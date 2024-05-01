@@ -94,6 +94,7 @@ class guestItem(BaseModel):
 
 
 # Action to barrier 
+
 def send_action(ip_address, port, hex_code, action):
     try:
         # Create a TCP socket
@@ -167,6 +168,7 @@ async def send_action_with_timeout(ip_address, port, hex_code, action, timeout):
         logger.error(f"Error sending Action '{hex_code}' to {ip_address}:{port}: {str(e)}")
         raise HTTPException(status_code=500, detail={"errordata": 500, "message": "error sending action to the barrier"})
     
+
 
 
 def response(ip_address, port, hex_code, action):

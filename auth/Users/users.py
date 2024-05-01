@@ -1,7 +1,6 @@
 from fastapi import APIRouter, FastAPI, HTTPException, Body
 from Models.items import UpdateUserData, Updateweb
 from Database.DB.Connection import connect_users
-from fastapi.middleware.cors import CORSMiddleware
 
 import random
 
@@ -73,7 +72,7 @@ async def find_user_by_email(email: str):
     user = await collection.find_one({'email': email})
     
     if user:
-        user['id'] = str(user['id'])
+        user['_id'] = str(user['_id'])
         return {"user": user}  
     else:
         raise HTTPException(status_code=404, detail='User not found')
@@ -82,7 +81,7 @@ async def find_user_by_email(email: str):
 
 #Get user by ID - API()
 @UserById.get('/userid/{id}', tags=["Users"])
-async def find_user_by_email(id: int):
+async def find_user_by_id(id: int):
     _, _, collection = await setup_db()
     
     user = await collection.find_one({'_id': id})
