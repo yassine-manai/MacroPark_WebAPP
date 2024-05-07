@@ -4,6 +4,8 @@ from Database.DB.Connection import connect_users
 
 import random
 
+from auth.Guests.guests import setup_db_users
+
 app = FastAPI()
 
 # Database connection
@@ -14,7 +16,7 @@ async def setup_db():
 
 # Generate random ID
 def generate_unique_id():
-    random_number = random.randint(200, 299)
+    random_number = random.randint(100, 299)
     return random_number
 
 
@@ -28,7 +30,6 @@ Login_User = APIRouter()
 Modify_User = APIRouter()
 Modify_Web = APIRouter()
 Delete_User = APIRouter()
-
 
 
 # Get all Users - API()
@@ -120,7 +121,9 @@ async def update_user(email: str, data: UpdateUserData):
             'name': data.name,
             'email': data.email,
             'phoneNumber': data.phoneNumber,
-            'password': data.password
+            'password': data.password,
+            'lpn1': data.lpn1,
+            'lpn2': data.lpn2
         }
         
         await collection.update_one({'email': email}, {'$set': update_data})
@@ -178,3 +181,42 @@ async def update_user_id(id: int, data: Updateweb):
     else:
         raise HTTPException(status_code=404, detail='User not found')
     
+""" app.get("/iduser/{id}")
+def get_user_info_id(id: int):
+    _, _, collection = setup_db_users()
+    user_data = collection.find_one({"_id": id})
+    if user_data:
+        user_id = user_data.get("_id")
+        user_name = user_data.get("name")
+        user_email = user_data.get("email")
+
+        response_content = {"user_email": user_email, "user_id": user_id, "user_name": user_name}
+        print(response_content)
+
+        return response_content
+    else:
+        # User not found
+        return  {"message": "User not found with the provided ID"}
+    
+@GID.get("/lpn/{lpn}")
+def get_user_info_lpn(lpn: str):
+    _, _, collection = setup_db_users()
+    user_data = collection.find_one(
+        {
+            "$or": [
+                {"lpn1": lpn},
+                {"lpn2": lpn},
+                {"lpn3": lpn},
+                {"lpn4": lpn}
+            ]
+        }
+    )
+    if user_data:
+        user_id = user_data.get("_id")
+        user_name = user_data.get("name")
+        user_email = user_data.get("email")
+
+        response_content = {"user_email": user_email, "user_id": user_id, "user_name": user_name}
+        print(response_content)
+
+        return response_content """

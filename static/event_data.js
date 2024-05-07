@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					noDataMessageRow.appendChild(noDataMessageCell);
 					tableBody.appendChild(noDataMessageRow);
 
-					return; // Exit function early if no data found
+					return; 
 				}
 				
 				if (!response.ok) {

@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from jinja2 import Environment, FileSystemLoader, TemplateNotFound
 
+from Camera.lpn import *
 from Elka.open_barrier import Open_barrier
 from Elka.close_barrier import Close_barrier
 from Elka.status_barrier import Status
@@ -18,7 +19,7 @@ from Elka.lock_barrier import Lock_barrier
 from Endpoints.barrier_Endpoint import *
 from Events.BarrierEvents.Get_Events import Event_List, EventById
 from Events.BarrierEvents.Delete_Event import *
-from Events.UserEvents.users_events import UserLogsList
+from Events.UserEvents.users_events import *
 from auth.Users.users import *
 from auth.Guests.guests import *
 from Config.config import APP_PORT
@@ -113,7 +114,12 @@ app.include_router(Delete_all_event)
 
 # User Logs Data Endpoints ------------------------------------------------------------- <-- Begin -->
 app.include_router(UserLogsList)
+app.include_router(UserByDate)
+#app.include_router(GID)
 
+# LPN CAMERA Endpoints ----------------------------------------------------------- <-- Begin -->
+#app.include_router(PostOnCarHandled)
+#app.include_router(PostOnCarDeparture)
 
 
 

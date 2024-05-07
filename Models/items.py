@@ -4,6 +4,20 @@ from fastapi import HTTPException
 from Config.log_config import logger
 import socket
 
+# User Event Camera Class
+class UserEvent(BaseModel):
+    id: str
+    user_name: str
+    user_email: str
+    MQTT_Server: str
+    MQTT_Topic: str
+    license: str
+    minQuality: float
+    avgQuality: float
+    triggerId: int
+    country: str
+    date: str
+    time: str
 
 # Barrier Class
 class BarrierItem(BaseModel):
@@ -47,6 +61,8 @@ class UpdateUserData(BaseModel):
     email: str
     phoneNumber: str
     password: str
+    lpn1: str
+    lpn2: str
 
     class Config:
         schema_extra = {
@@ -54,7 +70,9 @@ class UpdateUserData(BaseModel):
                 "name": "Name",
                 "email": "mail@example.com",
                 "phoneNumber": "1234567890",
-                "password": "password"
+                "password": "password",
+                "lpn1":" ", 
+                "lpn2": " "
             }
         }
 

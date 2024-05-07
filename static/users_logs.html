@@ -173,7 +173,7 @@
 						<!--begin::Toolbar-->
 						<div id="kt_app_toolbar" class="app-toolbar py-3 py-lg-6">
 							<!--begin::Toolbar container-->
-							<div id="kt_app_toolbar_container" class="app-container container-xxl d-flex flex-stack">
+							<div id="kt_app_toolbar_container" class="app-container container-xxxl d-flex flex-stack">
 
 								<!--begin::Tables Widget 11-->
 								<div class="card mb-5 mb-xl-8">
@@ -194,6 +194,7 @@
 												placeholder="Search events" />
 										</div>
 										<!--end::Search-->
+
 									</div>
 									<!--end::Header-->
 
@@ -206,12 +207,17 @@
 												<!--begin::Table head-->
 												<thead>
 													<tr class="fw-bold text-muted bg-light">
-														<th class="min-w-150px">User ID</th>
-														<th class="min-w-200px">Date</th>
-                                                        <th class="min-w-200px">Time</th>
-														<th class="min-w-250px">Licence Plate Number</th>
-														<th class="min-w-250px">IP Client</th>
-														<th class="min-w-250px">Action</th>
+														<th class="min-w-100px">User ID</th>
+														<th class="min-w-200px">User Name</th>
+
+														<th class="min-w-200px">Licence Plate Number</th>
+														<th class="min-w-150px">Min Quality</th>
+														<th class="min-w-180px">Device ID</th>
+
+														<th class="min-w-150px">Date</th>
+                                                        <th class="min-w-150px">Time</th>
+
+														<th class="min-w-150px">Method</th>
 													</tr>
 												</thead>
 												<!--end::Table head-->
@@ -303,21 +309,28 @@
 		<script src="/static/users_logs.js"></script>
 
 		<script> 
-            
-			document.addEventListener('DOMContentLoaded', function() {
-			// Get all input elements with type 'date' and data attribute 'kt-customer-table-filter="search"'
-			const dateInputs = document.querySelectorAll('input[type="date"][data-kt-customer-table-filter="search"]');
+		document.addEventListener('DOMContentLoaded', function() {
+
+			const dateInputs = document.querySelectorAll('input.form-control[data-kt-customer-table-filter="search"][type="date"]');
 			
-			// Get the current date in the format YYYY-MM-DD
-			const currentDate = new Date().toISOString().slice(0, 10);  // Format: 'YYYY-MM-DD'
+			// Get the current date
+			const currentDate = new Date();
 			
-			// Set the value attribute of each date input element to the current date
+			const year = currentDate.getFullYear();
+			const month = String(currentDate.getMonth() + 1).padStart(2, '0'); 
+			const day = String(currentDate.getDate()).padStart(2, '0');
+
+			const formattedDate = `${year}-${month}-${day}`;
+
 			dateInputs.forEach(function(input) {
-				input.value = currentDate;
-				console.log(currentDate);
+				input.value = formattedDate;
+				console.log(formattedDate);
 			});
 		});
-		</script>
+	</script>
+
+
+
 
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->

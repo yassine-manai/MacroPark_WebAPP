@@ -221,7 +221,6 @@ function modifyusers(userId) {
     })
     .then((data) => {
       const modifyNameInput = document.getElementById("name_modify");
-      const modifyIdInput = document.getElementById("id_modify");
       const modifyPhoneInput = document.getElementById("phone_modify");
       const modifyEmailInput = document.getElementById("email_modify");
       const modifyPasswordInput = document.getElementById("password_modify");
@@ -232,7 +231,6 @@ function modifyusers(userId) {
 
       if (
         !modifyNameInput ||
-        !modifyIdInput ||
         !modifyPhoneInput ||
         !modifyEmailInput ||
         !modifyPasswordInput ||
@@ -245,7 +243,6 @@ function modifyusers(userId) {
       }
 
       modifyNameInput.value = data.user.name || "";
-      modifyIdInput.value = data.user.id || "";
       modifyPhoneInput.value = data.user.phoneNumber || "";
       modifyEmailInput.value = data.user.email || "";
       modifyPasswordInput.value = "**********"; 
@@ -271,7 +268,6 @@ function modifyusers(userId) {
     event.preventDefault();
 
     const name = document.getElementById("name_modify").value;
-    const id = document.getElementById("id_modify").value;
     const phone = document.getElementById("phone_modify").value;
     const email = document.getElementById("email_modify").value;
     const lpn1 = document.getElementById("lpn1_modify").value;

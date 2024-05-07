@@ -2,7 +2,6 @@ import random
 from fastapi import APIRouter, Body, HTTPException
 from Database.DB.Connection import *
 from auth.Users import *
-from auth.Users.users import addUser
 
 
 

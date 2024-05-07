@@ -9398,3 +9398,122 @@
 2024-05-01 17:55:08.926 | INFO     | get_db_events:Events table already exists | db_events.py:30
 2024-05-01 17:55:08.934 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
 2024-05-01 17:55:08.950 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-01 18:18:21.548 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-01 18:18:21.569 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-01 18:20:10.417 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-01 18:20:10.433 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-01 18:20:10.440 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-01 18:20:10.451 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-01 18:20:10.459 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-01 18:20:18.583 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-01 18:20:18.651 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-01 18:20:18.660 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-01 18:20:18.670 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-01 18:20:18.686 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-01 18:20:38.164 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-01 18:20:38.187 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-01 18:20:38.196 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-01 18:20:38.205 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-01 18:20:38.214 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-02 06:54:07.104 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-02 06:54:09.157 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-02 06:54:09.186 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-02 06:54:22.836 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-02 06:54:22.865 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-02 06:54:24.071 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-02 06:54:24.097 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-02 06:54:24.115 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-02 06:54:24.130 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-02 06:54:24.142 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:25:41.178 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-03 10:25:47.315 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-03 10:25:47.327 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-03 10:25:49.039 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-03 10:25:49.077 | INFO     | open_barrier_by_id:Barrier info: IP - 192.168.25.207, Port - 52719, Hex Code - 55 03 01 01 00 B8 B4 | open_barrier.py:22
+2024-05-03 10:25:59.088 | ERROR    | send_action_with_timeout:Error establishing connection to 192.168.25.207:52719: timed out | items.py:165
+2024-05-03 10:25:59.089 | ERROR    | send_action_with_timeout:Error sending Action '55 03 01 01 00 B8 B4' to 192.168.25.207:52719: 500: {'errordata': 500, 'message': 'Error establishing connection to 192.168.25.207:52719: timed out'} | items.py:182
+2024-05-03 10:25:59.089 | ERROR    | open_barrier_by_id:HTTPException occurred: 500: {'errordata': 500, 'message': 'error sending action to the barrier'} | open_barrier.py:31
+2024-05-03 10:26:02.331 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-03 10:26:02.363 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:26:02.371 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:26:02.377 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:26:02.386 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:19.731 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-03 10:58:20.527 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:20.540 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:20.706 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:20.875 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:23.483 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:23.495 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:24.383 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:24.424 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:25.418 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:25.506 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:26.568 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:26.614 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:27.168 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:27.218 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:28.281 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:28.314 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:29.787 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:29.802 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-03 10:58:30.635 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-03 10:58:30.655 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 11:37:06.011 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-06 11:37:09.711 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-06 11:37:09.726 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-06 11:37:10.967 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-06 11:37:12.554 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-06 11:37:12.569 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-06 11:37:16.318 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-06 11:37:16.335 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 11:37:16.348 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 11:37:16.360 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 11:37:16.377 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:33.600 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-06 20:20:33.638 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:33.646 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:33.653 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:33.660 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:34.918 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:34.924 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:35.667 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:35.673 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:36.045 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:36.050 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:36.486 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:36.492 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:36.941 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:36.947 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:37.461 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:37.468 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:37.835 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:37.841 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:38.085 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:38.090 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:38.248 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:38.254 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:38.753 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:38.759 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:39.221 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:39.227 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:39.892 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:39.898 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:40.452 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:40.458 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:44.461 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:44.469 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:47.330 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:47.337 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-06 20:20:48.979 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-06 20:20:48.986 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-07 14:03:51.332 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-07 14:03:52.572 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-07 14:03:52.584 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-07 14:03:54.293 | INFO     | get_db_barrier:./Database/DB/barriers.db | db_barriers.py:7
+2024-05-07 14:03:54.309 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-07 14:03:54.320 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-07 14:03:54.332 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-07 14:03:54.345 | INFO     | get_db_events:Events table already exists | db_events.py:30
+2024-05-07 17:22:21.346 | INFO     | get_db_events:./Database/DB/events.db | db_events.py:8
+2024-05-07 17:22:21.402 | INFO     | get_db_events:Events table already exists | db_events.py:30

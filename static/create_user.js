@@ -8,13 +8,6 @@ var KTCreateApp = (function () {
     form = document.getElementById("kt_modal_create_app_form");
     validator = FormValidation.formValidation(form, {
       fields: {
-        id: {
-            validators: {
-              notEmpty: {
-                message: "User ID is required"
-              }
-            }
-          },
         name: {
           validators: {
             notEmpty: {
@@ -69,11 +62,6 @@ var KTCreateApp = (function () {
       validator.validate().then(function (status) {
         if (status === "Valid") {
           var name = document.getElementById("name").value;
-          var ids = document.getElementById("id").value;
-
-          var id = parseInt(ids, 10); 
-          console.log(id);
-
           var phone = document.getElementById("phone").value;
           var email = document.getElementById("email").value;
           var password = document.getElementById("password").value;
@@ -82,12 +70,14 @@ var KTCreateApp = (function () {
           var lpn3 = document.getElementById("lpn3").value;
           var lpn4 = document.getElementById("lpn4").value;
 
+          var hashedPassword = md5(password);
+
+
           var formData = {
             name: name,
-            id: id,
             phoneNumber: phone,
             email : email,
-            password: password,
+            password: hashedPassword,
             lpn1: lpn1,
             lpn2: lpn2,
             lpn3: lpn3,

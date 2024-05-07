@@ -15,13 +15,6 @@ var KTCreateApp = (function () {
             }
           }
         },
-        id: {
-          validators: {
-            notEmpty: {
-              message: "Barrier ID is required"
-            }
-          }
-        },
         ip: {
           validators: {
             notEmpty: {
@@ -97,7 +90,7 @@ var KTCreateApp = (function () {
 
           var formData = {
             name: name,
-            id: id,
+            _id: id,
             barrierType:barrierType,
             ip: ip,
             port: port,

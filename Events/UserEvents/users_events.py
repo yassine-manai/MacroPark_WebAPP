@@ -1,5 +1,7 @@
+from typing import List
 from fastapi import APIRouter, FastAPI, HTTPException, Body
 from Database.DB.Connection import connect_events
+from Models.items import UserEvent
 
 
 app = FastAPI()
@@ -10,15 +12,9 @@ async def setup_db():
     return client, db, collection
 
 
-
-
 # Define routers - APIs()
 UserLogsList = APIRouter()
-UserByEmail = APIRouter()
-UserById = APIRouter()
-User_List = APIRouter()
-
-
+UserByDate = APIRouter()
 
 
 # Get all Users Logs - API()
@@ -29,7 +25,7 @@ async def get_all_userEvents():
     users = await collection.find().to_list(length=None)
     
     formatted_users = []
-    for user in users:
+    for user in reversed(users):
         user['_id'] = str(user['_id'])
         formatted_users.append(user)
     
@@ -37,41 +33,18 @@ async def get_all_userEvents():
 
 
 
-
-
-#Get User by Email
-@UserByEmail.get('/user/{email}', tags=["Users"])
-async def find_user_by_email(email: str):
+@UserByDate.get('/usersLogs/{date}', tags=["Events"])
+async def find_users_by_date(date: str):
     _, _, collection = await setup_db()
     
-    user = await collection.find_one({'email': email})
+    cursor = collection.find({'date': date})
+    users = await cursor.to_list(length=None)
     
-    if user:
-        user['_id'] = str(user['_id'])
-        return {"user": user}  
+    if users:
+        reversed_users = list(reversed(users))
+        for user in reversed_users:
+            user['_id'] = str(user['_id'])
+        return {"users": reversed_users}
     else:
-        raise HTTPException(status_code=404, detail='User not found')
-    
-
-
-#Get user by ID - API()
-@UserById.get('/userid/{id}', tags=["Users"])
-async def find_user_by_id(id: int):
-    _, _, collection = await setup_db()
-    
-    user = await collection.find_one({'_id': id})
-    
-    if user:
-        user['_id'] = str(user['_id'])
-        return {"user": user}  
-    
-    else:
-        raise HTTPException(status_code=404, detail='User not found')
-    
-
-
-
-
-
-
+        raise HTTPException(status_code=404, detail='Logs not found')
 
