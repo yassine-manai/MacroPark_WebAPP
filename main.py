@@ -115,6 +115,8 @@ app.include_router(Delete_all_event)
 # User Logs Data Endpoints ------------------------------------------------------------- <-- Begin -->
 app.include_router(UserLogsList)
 app.include_router(UserByDate)
+app.include_router(UserByOid)
+
 #app.include_router(GID)
 
 # LPN CAMERA Endpoints ----------------------------------------------------------- <-- Begin -->

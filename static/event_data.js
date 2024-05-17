@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
 					const noDataMessageRow = document.createElement("tr");
 					const noDataMessageCell = document.createElement("td");
 					const span = document.createElement("span");
-					span.textContent = "No data found";
+					span.textContent = "No Event found";
 					span.classList.add("text-dark", "fw-bold", "text-hover-primary", "d-block", "mb-1", "fs-6");
 					noDataMessageCell.appendChild(span);
 					noDataMessageCell.colSpan = 5; // Span across all columns
@@ -134,3 +134,22 @@ document.addEventListener("DOMContentLoaded", function() {
 			updateTableBySearchInput();
 		});
 	
+
+		document.getElementById('logout').addEventListener('click', function() {
+			Swal.fire({
+				title: 'Are you sure you want to Logout?',
+				icon: 'warning',
+				showCancelButton: true,
+				confirmButtonText: 'Yes',
+				cancelButtonText: 'No',
+				buttonsStyling: false,
+				customClass: {
+					confirmButton: 'btn btn-danger',
+					cancelButton: 'btn btn-secondary'
+				}
+			}).then((result) => {
+				if (result.isConfirmed) {
+					window.location.href = 'login.html';
+				}
+			});
+		});

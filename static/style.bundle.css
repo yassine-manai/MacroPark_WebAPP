@@ -62521,3 +62521,14 @@ body {
         color: #fff !important
     }
 }
+
+
+.swal2-popup .swal-resize {
+    max-width: 100%  !important    ; /* Limit the maximum width of the popup */
+    max-height: 200%  !important    ; /* Limit the maximum height of the popup to 70% of viewport height */
+}
+
+.swal2-image {
+    max-width: 100%  !important    ; /* Ensure the image fits within the popup */
+    height: 150% !important    ; /* Allow the image height to adjust proportionally */
+}

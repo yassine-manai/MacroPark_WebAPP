@@ -148,3 +148,23 @@ async function handleBarrierAction(action, barrierId, command, extraData) {
 document.addEventListener("DOMContentLoaded", function () {
     fetchDataAndPopulateTable();
 });
+
+
+document.getElementById('logout').addEventListener('click', function() {
+    Swal.fire({
+        title: 'Are you sure you want to Logout?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Yes',
+        cancelButtonText: 'No',
+        buttonsStyling: false,
+        customClass: {
+            confirmButton: 'btn btn-danger',
+            cancelButton: 'btn btn-secondary'
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.location.href = 'login.html';
+        }
+    });
+});
