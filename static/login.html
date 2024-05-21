@@ -122,43 +122,44 @@
 		<!--end::Global Javascript Bundle-->
 		
 
-        <script>
-            
-            document.addEventListener("DOMContentLoaded", function() {
-                const emailInput = document.querySelector('input[name="email"]');
-                const passwordInput = document.querySelector('input[name="password"]');
-                const signInButton = document.getElementById("kt_sign_up_submit");
+			<script>
+				
+				document.addEventListener("DOMContentLoaded", function() {
+					const emailInput = document.querySelector('input[name="email"]');
+					const passwordInput = document.querySelector('input[name="password"]');
+					const signInButton = document.getElementById("kt_sign_up_submit");
 
-                signInButton.addEventListener("click", function(event) {
-                    event.preventDefault();
+					signInButton.addEventListener("click", function(event) {
+						event.preventDefault();
 
-                    const email = emailInput.value.trim();
-                    const password = passwordInput.value.trim();
+						const email = emailInput.value.trim();
+						const password = passwordInput.value.trim();
 
-                    // Check if email and password are correct (replace with your logic)
-                    if (email === "admin@sbm.com" && password === "sbm2024") {
-                        // Redirect to the desired page
-                        Swal.fire({
-                            icon: "success",
-                            title: `Welcome ${email}`,
-                            showConfirmButton: false,
-							timer: 3000
-                         });
-                        window.location.href = "static/users.html";
-                    } else {
-                        Swal.fire({
-                            icon: "error",	
-                            title: `Error `,
-                            text: `Check your email & password`,
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                    
-                    }
-                });
-            });
+						if (email === "admin@sbm.com" && password === "sbm2024") {
+							
+							sessionStorage.setItem("userEmail", email);
 
-        </script>
+							Swal.fire({
+								icon: "success",
+								title: `Welcome ${email}`,
+								showConfirmButton: false,
+								timer: 3000
+							});
+							window.location.href = "static/users.html";
+						} else {
+							Swal.fire({
+								icon: "error",	
+								title: `Error `,
+								text: `Check your email & password`,
+								showConfirmButton: false,
+								timer: 1500
+							});
+						
+						}
+					});
+				});
+
+			</script>
 
 
 	</body>

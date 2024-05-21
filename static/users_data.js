@@ -55,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                   const idCell = createCell(user._id, true);
                   console.log("hello"+idCell);
+                  
                   const nameCell = createCell(user.name, true);
                   const phone = createCell(user.phoneNumber, true);
                   const email = createCell(user.email, true);

@@ -212,19 +212,25 @@ async function updateTableBySearchInput() {
         if (searchText) {
             endpoint += `/${searchText}`;
         }
+        Swal.fire({
+            title: "Fetching History . . . ",
+            didOpen: () => {
+                Swal.showLoading();
+            },
+        });
 
         const response = await fetch(endpoint);
 
         if (response.status === 404) {
             const eventsTable = document.getElementById("eventsTable");
             const tableBody = eventsTable.querySelector("tbody");
-            tableBody.innerHTML = ""; // Clear existing table rows
+            tableBody.innerHTML = ""; 
             
             const noDataMessageRow = document.createElement("tr");
             const noDataMessageCell = document.createElement("td");
             noDataMessageCell.textContent = "No event found";
-            noDataMessageCell.colSpan = 8; // Span across all columns
-            noDataMessageCell.style.textAlign = "center"; // Center the text
+            noDataMessageCell.colSpan = 8; 
+            noDataMessageCell.style.textAlign = "center"; 
             noDataMessageRow.appendChild(noDataMessageCell);
             tableBody.appendChild(noDataMessageRow);
 
@@ -234,6 +240,9 @@ async function updateTableBySearchInput() {
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
+
+        Swal.close();
+
 
         const events = await response.json();
         renderTable(events.users);

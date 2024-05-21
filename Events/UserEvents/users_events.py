@@ -15,7 +15,7 @@ async def setup_db():
 UserLogsList = APIRouter()
 UserByDate = APIRouter()
 UserByOid = APIRouter()
-
+UserByid = APIRouter()
 
 # Get all Users Logs - API()
 @UserLogsList.get('/alluserevents', tags=["Events"])
@@ -66,3 +66,28 @@ async def find_users_Log_by_id(id: str):
     else:
         raise HTTPException(status_code=404, detail='Log not found')
 
+
+@UserByid.get('/userappid/{id}', tags=["Events"])
+async def find_users_by_date(id: int):
+    _, _, collection = await setup_db()
+    
+    fields = {
+        'user_name': 1,
+        'Methode': 1,
+        'license': 1,
+        'deviceId': 1,
+        'date': 1,
+        'time': 1,
+        'imageData': 1
+    }
+    
+    cursor = collection.find({'id_user': id}, fields)
+    users = await cursor.to_list(length=None)
+    
+    if users:
+        reversed_users = list(reversed(users))
+        for user in reversed_users:
+            user['_id'] = str(user['_id'])
+        return {"users": reversed_users}
+    else:
+        raise HTTPException(status_code=404, detail='Logs not found')

@@ -22,7 +22,7 @@ from Events.BarrierEvents.Delete_Event import *
 from Events.UserEvents.users_events import *
 from auth.Users.users import *
 from auth.Guests.guests import *
-from Config.config import APP_PORT
+from Config.config import APP_IP, APP_PORT
 
 
 
@@ -116,6 +116,7 @@ app.include_router(Delete_all_event)
 app.include_router(UserLogsList)
 app.include_router(UserByDate)
 app.include_router(UserByOid)
+app.include_router(UserByid)
 
 #app.include_router(GID)
 
@@ -187,4 +188,4 @@ async def render_template(request: Request):
 
 # APP Main Runner
 if __name__ == "__main__":  
-    uvicorn.run("main:app", host="0.0.0.0", port=APP_PORT, reload=True)
+    uvicorn.run("main:app", host=APP_IP, port=APP_PORT, reload=True)

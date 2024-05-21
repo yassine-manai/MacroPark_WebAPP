@@ -1,3 +1,3 @@
 // config.js
-var ipAddress="127.0.0.1"
+var ipAddress="0.0.0.0"
 var portep="8200"
